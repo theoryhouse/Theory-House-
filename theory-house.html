@@ -5,148 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Theory House provides academic, business, medical and presentation support services.">
   <title>Theory House | Academic &amp; Professional Services</title>
-  <style>
-    /* Basic reset and layout */
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      background: #f7f8fa;
-      line-height: 1.6;
-    }
-
-    /* Header */
-    header {
-      background: #183153;
-      color: white;
-      padding: 12px 16px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav {
-      max-width: 1050px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .brand {
-      display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit
-    }
-    .brand img{height:48px;width:auto;border-radius:8px}
-    .logo-text{font-size:20px;font-weight:700}
-    nav .links{display:flex;gap:14px;align-items:center}
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-      padding:6px 8px;border-radius:6px
-    }
-    nav a:hover { text-decoration: underline; background: rgba(255,255,255,0.03); }
-
-    /* Icon buttons row under hero */
-    .quick-links{display:flex;gap:18px;justify-content:center;margin:18px 0 6px}
-    .quick-item{background:white;border-radius:10px;padding:14px 18px;display:flex;flex-direction:column;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);width:110px;text-decoration:none;color:#183153}
-    .quick-item svg{width:46px;height:46px;margin-bottom:10px}
-    .quick-item span{font-weight:700}
-
-    /* Hero */
-    .hero {
-      background: white;
-      padding: 46px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      margin: 0 0 12px;
-      font-size: 36px;
-      color: #183153;
-    }
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 20px;
-      color: #555;
-      font-size: 17px;
-    }
-    .button {
-      display: inline-block;
-      background: #183153;
-      color: white;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      margin: 6px;
-    }
-    .button:hover { background: #0f233c; }
-
-    section {
-      max-width: 1050px;
-      margin: auto;
-      padding: 34px 20px;
-    }
-    .section-title {
-      text-align: center;
-      color: #183153;
-      margin-bottom: 24px;
-      font-size: 26px;
-    }
-
-    /* Services grid */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-    .card {
-      background: white;
-      padding: 18px;
-      border-radius: 8px;
-      border: 1px solid #e4e7eb;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .card h3 { margin-top: 0;color:#183153 }
-
-    .about, .contact-box {
-      background: white;
-      border-radius: 8px;
-      padding: 22px;
-      border: 1px solid #e4e7eb;
-    }
-
-    .contact-item { margin: 10px 0; display:flex;align-items:center;gap:10px }
-    .contact-item svg{width:20px;height:20px;flex-shrink:0}
-    .contact-item a { color: #183153; font-weight: 600; text-decoration: none }
-
-    footer { background: #183153; color: white; text-align: center; padding: 20px 12px; margin-top: 20px; }
-    footer a { color: white; text-decoration: underline }
-
-    /* Responsive tweaks */
-    @media (max-width: 720px) {
-      .hero h1 { font-size: 30px; }
-      .brand img{height:40px}
-      nav .links{width:100%;justify-content:center}
-      .quick-item{width:84px;padding:12px}
-      .quick-item svg{width:40px;height:40px}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
   <nav>
     <a class="brand" href="index.html" aria-label="Theory House home">
-      <img src="images/logo.svg" alt="Theory House logo">
+      <picture>
+        <source srcset="images/logo.png" type="image/png">
+        <img src="images/logo.png" alt="Theory House logo">
+      </picture>
       <span class="logo-text">Theory House</span>
     </a>
     <div class="links" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="theory-house.html#contact">Contact</a>
     </div>
   </nav>
 </header>
@@ -156,28 +32,30 @@
     <h1>Theory House</h1>
     <p>Academic and professional support for students, researchers, and professionals. We provide clear writing, formatting, and presentation services tailored to your requirements.</p>
     <a class="button" href="services.html">View Services</a>
-    <a class="button" href="contact.html">Contact Us</a>
+    <a class="button" href="theory-house.html#contact">Contact Us</a>
+
+    <div class="writing-anim" aria-hidden="true">
+      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated writing graphic">
+        <path class="pen-path" d="M10 40 Q50 10,90 40 T170 40" stroke-linecap="round"/>
+        <circle cx="170" cy="40" r="4" fill="#183153" />
+      </svg>
+    </div>
   </section>
 
-  <!-- Large icon links -->
   <div class="quick-links" aria-hidden="false">
     <a class="quick-item" href="index.html" title="Home">
-      <!-- home icon -->
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="#183153" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>Home</span>
     </a>
     <a class="quick-item" href="services.html" title="Services">
-      <!-- services icon (list) -->
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#183153" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>Services</span>
     </a>
     <a class="quick-item" href="about.html" title="About">
-      <!-- about icon (info) -->
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 8h.01M11 12h2v4h-2zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" stroke="#183153" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>About</span>
     </a>
-    <a class="quick-item" href="contact.html" title="Contact">
-      <!-- contact icon (phone/chat) -->
+    <a class="quick-item" href="theory-house.html#contact" title="Contact">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2h-1a10 10 0 0 1-9-9V7a2 2 0 0 1 2-2h1" stroke="#183153" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 18l4 4" stroke="#183153" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>Contact</span>
     </a>
@@ -201,6 +79,13 @@
     <h2 class="section-title">About Theory House</h2>
     <div class="about">
       <p>Theory House provides simple, professional and reliable academic and document support services. We focus on clear presentation, organized content and professional formatting for a range of academic and professional documents. Our team values confidentiality, originality, and timely delivery.</p>
+
+      <div class="writing-anim" aria-hidden="true">
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated book graphic">
+          <path class="pen-path" d="M20 50 Q60 20,100 50 T180 50" stroke-linecap="round"/>
+          <rect x="60" y="20" width="80" height="40" fill="#fff" stroke="#183153" stroke-width="1.2" rx="4"/>
+        </svg>
+      </div>
     </div>
   </section>
 
@@ -208,45 +93,37 @@
     <h2 class="section-title">Contact Us</h2>
     <div class="contact-box">
       <div class="contact-item">
-        <!-- email icon -->
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 8.5v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#183153" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 8.5L12 13 3 8.5" stroke="#183153" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><path d="M3 8.5v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#183153" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 8.5L12 13 3 8.5" stroke="#183153" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <strong>Email:</strong>&nbsp;
-        <a href="mailto:theoryhouse3@gmail.com" aria-label="Email Theory House">theoryhouse3@gmail.com</a>
+        <a href="mailto:theoryhouse3@gmail.com">theoryhouse3@gmail.com</a>
       </div>
 
       <div class="contact-item">
-        <!-- whatsapp icon -->
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16.2 7.8a4.2 4.2 0 0 0-6-0 4.2 4.2 0 0 0 0 6l.2.2L10 15l1-1 .2.2a4.2 4.2 0 0 0 6 0 4.2 4.2 0 0 0 0-6z" stroke="#25D366" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12a9 9 0 1 1-4.5-7.7" stroke="#25D366" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.373 0 .001 5.373 0 12c0 2.11.55 4.07 1.6 5.82L0 24l6.36-1.6A11.93 11.93 0 0 0 12 24c6.627 0 12-5.373 12-12 0-1.86-.4-3.63-1.48-5.22z" fill="#25D366"/><path d="M17.21 14.25c-.27-.14-1.6-.79-1.85-.88-.24-.09-.41-.14-.58.14-.16.27-.63.88-.77 1.06-.14.18-.28.2-.53.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.28.41-.42.14-.14.18-.24.27-.41.09-.16.05-.31-.02-.44-.07-.12-.58-1.4-.8-1.92-.21-.5-.43-.44-.58-.45l-.49-.01c-.16 0-.42.06-.64.31-.22.24-.84.82-.84 2 0 1.18.86 2.33.98 2.49.12.16 1.69 2.59 4.13 3.63 2.14.9 2.69.86 3.67.72.59-.08 1.6-.65 1.83-1.28.23-.64.23-1.19.16-1.28-.07-.09-.26-.14-.54-.27z" fill="#fff"/></svg>
         <strong>WhatsApp:</strong>&nbsp;
-        <a href="https://wa.me/923126707306" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 0312 6707306">+92 312 6707306</a>
+        <a href="https://wa.me/923126707306" target="_blank" rel="noopener noreferrer">+92 312 6707306</a>
         &nbsp;|&nbsp;
-        <a href="https://wa.me/923452411228" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 0345 2411228">+92 345 2411228</a>
+        <a href="https://wa.me/923452411228" target="_blank" rel="noopener noreferrer">+92 345 2411228</a>
       </div>
 
       <div class="contact-item">
-        <!-- clock icon -->
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#183153" stroke-width="1.2"/><path d="M12 7v6l4 2" stroke="#183153" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <strong>Hours:</strong>&nbsp;<span>Mon–Sat, 09:00–18:00 (local time)</span>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#183153" stroke-width="1.2"/><path d="M12 7v6l4 2" stroke="#183153" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <strong>Hours:</strong>&nbsp;<span>Mon - Sat: 9 AM to 8 PM</span>
       </div>
 
-      <div class="contact-item">
-        <strong>Phone:</strong>&nbsp;<a href="tel:+923126707306" aria-label="Call 0312 6707306">+92 312 6707306</a>
-      </div>
-
-      <p>For inquiries, service details, and project discussions, please contact us by email or WhatsApp. Briefly describe your requirements, deadlines, and document type so we can provide a quote and timeline.</p>
+      <p>For inquiries and project discussions, please contact us by WhatsApp or email. Briefly describe your requirements, deadline and document type for a quote and timeline.</p>
     </div>
   </section>
-</main>
 
-<footer>
-  <p>&copy; 2026 Theory House. All rights reserved.</p>
-  <p>Contact: <a href="mailto:theoryhouse3@gmail.com">theoryhouse3@gmail.com</a>
-    &nbsp;|&nbsp;
-    WhatsApp:
-    <a href="https://wa.me/923126707306" target="_blank" rel="noopener noreferrer">+92 312 6707306</a>,
-    <a href="https://wa.me/923452411228" target="_blank" rel="noopener noreferrer">+92 345 2411228</a>
-  </p>
-</footer>
+  <footer>
+    <p>&copy; 2026 Theory House. All rights reserved.</p>
+    <p>
+      <a href="mailto:theoryhouse3@gmail.com" style="color:inherit;text-decoration:underline">theoryhouse3@gmail.com</a>
+      &nbsp;|&nbsp;
+      <a href="https://wa.me/923126707306" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">+92 312 6707306</a>,
+      <a href="https://wa.me/923452411228" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">+92 345 2411228</a>
+    </p>
+  </footer>
 
 </body>
 </html>
