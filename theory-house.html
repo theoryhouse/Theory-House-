@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Theory House provides academic, business, medical and presentation support services.">
-  <title>Theory House | Academic & Professional Services</title>
+  <title>Theory House | Academic &amp; Professional Services</title>
   <style>
+    /* Basic reset and layout */
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -15,10 +16,12 @@
       background: #f7f8fa;
       line-height: 1.6;
     }
+
+    /* Header */
     header {
       background: #183153;
       color: white;
-      padding: 18px 20px;
+      padding: 12px 16px;
       position: sticky;
       top: 0;
       z-index: 10;
@@ -29,103 +32,96 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
+      flex-wrap: wrap;
     }
-    .logo {
-      font-size: 24px;
-      font-weight: 700;
+    .brand {
+      display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit
     }
+    .brand img{height:48px;width:auto;border-radius:8px}
+    .logo-text{font-size:20px;font-weight:700}
+    nav .links{display:flex;gap:14px;align-items:center}
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
       font-size: 15px;
+      padding:6px 8px;border-radius:6px
     }
-    nav a:hover { text-decoration: underline; }
+    nav a:hover { text-decoration: underline; background: rgba(255,255,255,0.03); }
 
+    /* Hero */
     .hero {
       background: white;
-      padding: 75px 20px;
+      padding: 56px 20px;
       text-align: center;
     }
     .hero h1 {
       margin: 0 0 12px;
-      font-size: 44px;
+      font-size: 40px;
       color: #183153;
     }
     .hero p {
-      max-width: 700px;
-      margin: 0 auto 25px;
+      max-width: 760px;
+      margin: 0 auto 20px;
       color: #555;
-      font-size: 18px;
+      font-size: 17px;
     }
     .button {
       display: inline-block;
       background: #183153;
       color: white;
       text-decoration: none;
-      padding: 12px 22px;
+      padding: 10px 18px;
       border-radius: 6px;
-      margin: 5px;
+      margin: 6px;
     }
     .button:hover { background: #0f233c; }
 
     section {
       max-width: 1050px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 44px 20px;
     }
     .section-title {
       text-align: center;
       color: #183153;
-      margin-bottom: 30px;
-      font-size: 30px;
+      margin-bottom: 24px;
+      font-size: 28px;
     }
+
+    /* Services grid */
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
     }
     .card {
       background: white;
-      padding: 22px;
+      padding: 18px;
       border-radius: 8px;
       border: 1px solid #e4e7eb;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
-    .card h3 {
-      margin-top: 0;
-      color: #183153;
-    }
+    .card h3 { margin-top: 0;color:#183153 }
+
     .about, .contact-box {
       background: white;
       border-radius: 8px;
-      padding: 28px;
+      padding: 22px;
       border: 1px solid #e4e7eb;
     }
-    .contact-item {
-      margin: 12px 0;
-    }
-    .contact-item a {
-      color: #183153;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    footer {
-      background: #183153;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 20px;
-    }
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-    @media (max-width: 650px) {
-      nav { flex-direction: column; }
-      nav a { margin: 0 8px; }
-      .hero h1 { font-size: 35px; }
+
+    .contact-item { margin: 10px 0; }
+    .contact-item a { color: #183153; font-weight: 600; text-decoration: none }
+
+    footer { background: #183153; color: white; text-align: center; padding: 20px 12px; margin-top: 20px; }
+    footer a { color: white; text-decoration: underline }
+
+    /* Responsive tweaks */
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 30px; }
+      .brand img{height:40px}
+      nav .links{width:100%;justify-content:center}
     }
   </style>
 </head>
@@ -133,12 +129,15 @@
 
 <header>
   <nav>
-    <div class="logo">Theory House</div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <a class="brand" href="index.html" aria-label="Theory House home">
+      <img src="images/logo.png" alt="Theory House logo">
+      <span class="logo-text">Theory House</span>
+    </a>
+    <div class="links" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 </header>
@@ -146,9 +145,9 @@
 <main>
   <section class="hero" id="home">
     <h1>Theory House</h1>
-    <p>Academic and professional support for students, researchers, and professionals.</p>
-    <a class="button" href="#services">View Services</a>
-    <a class="button" href="#contact">Contact Us</a>
+    <p>Academic and professional support for students, researchers, and professionals. We provide clear writing, formatting, and presentation services tailored to your requirements.</p>
+    <a class="button" href="services.html">View Services</a>
+    <a class="button" href="contact.html">Contact Us</a>
   </section>
 
   <section id="services">
@@ -168,7 +167,7 @@
   <section id="about">
     <h2 class="section-title">About Theory House</h2>
     <div class="about">
-      <p>Theory House provides simple, professional and reliable academic and document support services. We focus on clear presentation, organized content and professional formatting for a range of academic and business needs.</p>
+      <p>Theory House provides simple, professional and reliable academic and document support services. We focus on clear presentation, organized content and professional formatting for a range of academic and professional documents. Our team values confidentiality, originality, and timely delivery.</p>
     </div>
   </section>
 
@@ -176,19 +175,39 @@
     <h2 class="section-title">Contact Us</h2>
     <div class="contact-box">
       <div class="contact-item"><strong>Email:</strong>
-        <a href="mailto:theoryhouse3@gmail.com">theoryhouse3@gmail.com</a>
+        <a href="mailto:theoryhouse3@gmail.com" aria-label="Email Theory House">theoryhouse3@gmail.com</a>
       </div>
-      <div class="contact-item"><strong>WhatsApp:</strong>
-        <a href="https://wa.me/923126707306" target="_blank" rel="noopener">03126707306</a>
+
+      <div class="contact-item">
+        <strong>WhatsApp:</strong>
+        <span>
+          <a href="https://wa.me/923126707306" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 0312 6707306">+92 312 6707306</a>
+          &nbsp;|&nbsp;
+          <a href="https://wa.me/923452411228" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 0345 2411228">+92 345 2411228</a>
+        </span>
       </div>
-      <p>For inquiries, service details, and project discussions, please contact us by email or WhatsApp.</p>
+
+      <div class="contact-item"><strong>Phone:</strong>
+        <a href="tel:+923126707306" aria-label="Call 0312 6707306">+92 312 6707306</a>
+      </div>
+
+      <div class="contact-item"><strong>Hours:</strong>
+        <span>Mon–Sat, 09:00–18:00 (local time)</span>
+      </div>
+
+      <p>For inquiries, service details, and project discussions, please contact us by email or WhatsApp. Briefly describe your requirements, deadlines, and document type so we can provide a quote and timeline.</p>
     </div>
   </section>
 </main>
 
 <footer>
   <p>&copy; 2026 Theory House. All rights reserved.</p>
-  <p><a href="mailto:theoryhouse3@gmail.com">theoryhouse3@gmail.com</a> | WhatsApp: 03126707306</p>
+  <p>Contact: <a href="mailto:theoryhouse3@gmail.com">theoryhouse3@gmail.com</a>
+    &nbsp;|&nbsp;
+    WhatsApp:
+    <a href="https://wa.me/923126707306" target="_blank" rel="noopener noreferrer">+92 312 6707306</a>,
+    <a href="https://wa.me/923452411228" target="_blank" rel="noopener noreferrer">+92 345 2411228</a>
+  </p>
 </footer>
 
 </body>
