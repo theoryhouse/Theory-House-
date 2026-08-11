@@ -1,91 +1,356 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact — Theory House</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-top">
-      <a class="brand" href="index.html"><img class="logo-img" src="Images/logo.png" alt="Theory House logo"><span class="site-title">Theory House</span></a>
-      <div class="header-contacts" aria-hidden>
-        <!-- header has only the email icon; WhatsApp removed from header -->
-        <a class="contact-icon" href="mailto:theoryhouse3@gmail.com" title="Email"><svg class="icon email-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg></a>
-      </div>
-    </div>
-    <nav class="site-nav container"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-  </header>
 
-  <main class="container">
-    <h1>Contact Us</h1>
-    <p>If you'd like a quote or to request a service, reach us below:</p>
+<header class="site-header">
 
-    <!-- Email (icon only + bold address) -->
-    <p class="contact-line">
-      <svg class="icon email-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden>
-        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-      </svg>
-      <a href="mailto:theoryhouse3@gmail.com" class="contact-link-inline"><strong>theoryhouse3@gmail.com</strong></a>
-    </p>
+  <div class="container header-top">
 
-    <!-- WhatsApp (icon only + two numbers in same line, bold black) -->
-    <p class="contact-line">
-      <img src="Images/Images/whatsapp-icon.png" alt="WhatsApp" class="wa-img" />
-      <span class="contact-numbers">
-        <a href="https://wa.me/923126707306" target="_blank" rel="noopener">+92 312 6707306</a>
-        &nbsp;|&nbsp;
-        <a href="https://wa.me/923452411228" target="_blank" rel="noopener">+92 345 2411228</a>
+    <a class="brand" href="index.html">
+
+      <img
+        class="logo-img"
+        src="Images/logo.png"
+        alt="Theory House logo">
+
+      <span class="site-title">
+        Theory House
       </span>
-    </p>
 
-    <!-- Working line -->
-    <p class="working-line">
-      <strong>Working 🕘:</strong>
-      <span class="work-days">Mon - Sat</span>
-      <span class="dot red" aria-hidden></span>
-      <strong class="hours"><span class="hours-text">9AM - 9PM</span></strong>
-    </p>
+    </a>
 
-    <h2>Request a Quote</h2>
-    <form class="contact-form" action="#" method="POST" aria-label="Request a quote form">
-      <label>Name<input type="text" name="name" required></label>
-      <label>Email<input type="email" name="email" required></label>
-      <label>Service required
-        <select name="service">
-          <option>Essay & Assignment</option>
-          <option>Thesis & Dissertation</option>
-          <option>Editing & Proofreading</option>
-        </select>
-      </label>
-      <label>Details<textarea name="details" rows="6"></textarea></label>
-      <p><button type="submit">Send request</button></p>
-    </form>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-block">
-        <strong>Contact</strong>
-        <p class="contact-line footer-contact">
-          <svg class="icon email-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
-          <a href="mailto:theoryhouse3@gmail.com"><strong>theoryhouse3@gmail.com</strong></a>
-        </p>
+    <div class="header-contacts">
 
-        <p class="contact-line footer-contact">
-          <img src="Images/Images/whatsapp-icon.png" alt="WhatsApp" class="wa-img" />
-          <span class="contact-numbers">
-            <a href="https://wa.me/923126707306" target="_blank" rel="noopener">+92 312 6707306</a>
-            &nbsp;|&nbsp;
-            <a href="https://wa.me/923452411228" target="_blank" rel="noopener">+92 345 2411228</a>
-          </span>
-        </p>
-      </div>
+      <a
+        class="contact-icon"
+        href="mailto:theoryhouse3@gmail.com"
+        aria-label="Email"
+        title="Email">
 
-      <div class="footer-block"><strong>Working Hours</strong><p>Mon - Sat ▪︎ 9AM - 9PM</p></div>
+        <svg
+          class="icon email-icon"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          aria-hidden="true">
+
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+
+        </svg>
+
+      </a>
+
     </div>
-    <div class="container footer-bottom"><p>&copy; 2026 Theory House</p></div>
-  </footer>
+
+  </div>
+
+
+  <nav class="site-nav container" aria-label="Main navigation">
+
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<main class="container">
+
+  <h1>
+    Contact Us
+  </h1>
+
+
+  <p>
+    If you'd like a quote or to request a service,
+    reach us below:
+  </p>
+
+
+  <!-- EMAIL -->
+
+  <p class="contact-line">
+
+    <svg
+      class="icon email-icon"
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      aria-hidden="true">
+
+      <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+
+    </svg>
+
+    <a
+      href="mailto:theoryhouse3@gmail.com"
+      class="contact-link-inline">
+
+      <strong>
+        theoryhouse3@gmail.com
+      </strong>
+
+    </a>
+
+  </p>
+
+
+  <!-- WHATSAPP -->
+
+  <p class="contact-line">
+
+    <img
+      src="Images/Images/whatsapp-icon.png"
+      alt="WhatsApp"
+      class="wa-img">
+
+    <span class="contact-numbers">
+
+      <a
+        href="https://wa.me/923126707306"
+        target="_blank"
+        rel="noopener">
+        +92 312 6707306
+      </a>
+
+      <span>|</span>
+
+      <a
+        href="https://wa.me/923452411228"
+        target="_blank"
+        rel="noopener">
+        +92 345 2411228
+      </a>
+
+    </span>
+
+  </p>
+
+
+  <!-- WORKING HOURS -->
+
+  <p class="working-line">
+
+    <strong class="working-label">
+      Working
+    </strong>
+
+    <span class="clock">
+      🕘:
+    </span>
+
+    <span class="work-days">
+      Mon - Sat
+    </span>
+
+    <span
+      class="dot"
+      aria-hidden="true">
+    </span>
+
+    <span class="hours-text">
+      9AM - 9PM
+    </span>
+
+  </p>
+
+
+  <h2>
+    Request a Quote
+  </h2>
+
+
+  <form
+    class="contact-form"
+    action="#"
+    method="POST"
+    aria-label="Request a quote form">
+
+
+    <label>
+      Name
+
+      <input
+        type="text"
+        name="name"
+        required>
+
+    </label>
+
+
+    <label>
+      Email
+
+      <input
+        type="email"
+        name="email"
+        required>
+
+    </label>
+
+
+    <label>
+      Service required
+
+      <select name="service">
+
+        <option>
+          Essay &amp; Assignment
+        </option>
+
+        <option>
+          Thesis &amp; Dissertation
+        </option>
+
+        <option>
+          Editing &amp; Proofreading
+        </option>
+
+      </select>
+
+    </label>
+
+
+    <label>
+      Details
+
+      <textarea
+        name="details"
+        rows="6"></textarea>
+
+    </label>
+
+
+    <p>
+
+      <button type="submit">
+        Send request
+      </button>
+
+    </p>
+
+  </form>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container footer-inner">
+
+
+    <div class="footer-block">
+
+      <strong>Contact</strong>
+
+
+      <p class="footer-contact-line">
+
+        <svg
+          class="icon email-icon"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          aria-hidden="true">
+
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+
+        </svg>
+
+        <a href="mailto:theoryhouse3@gmail.com">
+          <strong>theoryhouse3@gmail.com</strong>
+        </a>
+
+      </p>
+
+
+      <p class="footer-contact-line">
+
+        <img
+          src="Images/Images/whatsapp-icon.png"
+          alt="WhatsApp"
+          class="wa-img">
+
+        <span class="contact-numbers">
+
+          <a
+            href="https://wa.me/923126707306"
+            target="_blank"
+            rel="noopener">
+            +92 312 6707306
+          </a>
+
+          <span>|</span>
+
+          <a
+            href="https://wa.me/923452411228"
+            target="_blank"
+            rel="noopener">
+            +92 345 2411228
+          </a>
+
+        </span>
+
+      </p>
+
+    </div>
+
+
+    <div class="footer-block">
+
+      <strong>Working Hours</strong>
+
+      <p class="footer-working-line">
+
+        <strong class="working-label">
+          Working
+        </strong>
+
+        <span class="clock">
+          🕘:
+        </span>
+
+        <span class="work-days">
+          Mon - Sat
+        </span>
+
+        <span
+          class="working-dot"
+          aria-hidden="true">
+        </span>
+
+        <span class="hours-text">
+          9AM - 9PM
+        </span>
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <p>
+      &copy; 2026 Theory House — Academic Writing Services
+    </p>
+
+  </div>
+
+</footer>
+
 </body>
 </html>
