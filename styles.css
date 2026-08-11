@@ -27,14 +27,14 @@ body{
 .site-header{background:var(--header-bg);color:#fff}
 .header-top{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
-.logo-img{height:56px;width:auto;border-radius:8px;display:block}
+/* logo made slightly larger as requested */
+.logo-img{height:72px;width:auto;border-radius:8px;display:block}
 .site-title{font-weight:800;font-size:1rem;line-height:1;color:#fff}
 
-/* header icons */
+/* header icons - now only email in header (no whatsapp in header) */
 .header-contacts{display:flex;gap:10px;align-items:center}
 .contact-icon{display:inline-flex;align-items:center;justify-content:center;padding:6px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06)}
 .contact-icon .icon{width:20px;height:20px;fill:currentColor;display:block}
-.whatsapp-icon{color:#25D366}
 
 /* nav */
 .site-nav{display:flex;gap:18px;justify-content:center;padding:0.6rem 0}
@@ -65,21 +65,27 @@ body{
 .about-title{font-weight:800;letter-spacing:-0.3px;display:inline-block;margin:0 0 0.75rem}
 
 /* contact + working line styles */
+/* general contact line layout */
 .contact-line{display:flex;align-items:center;gap:10px;margin:0 0 0.6rem;color:var(--text);font-size:1rem}
 .contact-line .icon{flex:0 0 20px;width:20px;height:20px;fill:currentColor;display:inline-block}
-.whatsapp-icon{color:#25D366}
-.contact-link-inline{color:var(--accent);text-decoration:none}
-.contact-numbers a{color:var(--accent);text-decoration:none}
-.contact-numbers a:hover{text-decoration:underline}
 
+/* whatsapp icon as uploaded PNG */
+.wa-img { width:20px; height:20px; display:inline-block; object-fit:contain; }
+
+/* footer contact numbers styling: bold black for numbers */
+.contact-numbers a { color: #000; font-weight:700; text-decoration:none; }
+.contact-numbers a:hover { text-decoration:underline; }
+
+/* email link style */
+.contact-link-inline{color:var(--accent);text-decoration:none}
+
+/* working line: red dot and grey bold underlined hours */
 .working-line{display:flex;align-items:center;gap:8px;margin-top:0.4rem;font-size:1rem}
 .working-line .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#cfcfcf;vertical-align:middle}
 .working-line .dot.red{background:#ff3b30}
 .working-line .work-days{margin-left:4px;color:var(--text);font-weight:600}
 .working-line .hours{margin-left:8px}
 .hours-text{color:#6b7280;font-weight:700;text-decoration:underline}
-
-.footer-block .contact-line{margin:0.25rem 0;font-size:0.95rem}
 
 /* footer */
 .site-footer{background:#f1f5f9;padding:1.25rem 0;margin-top:2rem}
@@ -95,7 +101,7 @@ body{
   .hero-media{width:100%}
   .hero-text h1{font-size:1.6rem}
   .preview-grid{grid-template-columns:1fr;gap:12px}
-  .logo-img{height:48px}
+  .logo-img{height:64px} /* slightly smaller on small screens */
   .site-title{font-size:0.95rem}
   .contact-icon{padding:6px}
 }
@@ -111,6 +117,6 @@ body{
   .card-body h3{font-size:1rem}
   .card-body p{font-size:0.95rem}
   .container{padding:0.75rem}
-  .logo-img{height:44px}
+  .logo-img{height:56px}
   .site-nav{gap:12px;font-size:0.95rem}
 }
