@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 :root {
   --accent: #0b76ff;
   --bg: #ffffff;
@@ -63,7 +65,7 @@ a {
   text-decoration: none;
 }
 
-/* BIGGER LOGO SIZE */
+/* BIG LOGO */
 .logo-img {
   width: 80px;
   height: 80px;
@@ -133,52 +135,72 @@ main.container {
 
 
 /* =====================================================
-   HERO
+   HERO SECTION LAYOUT
    ===================================================== */
 
 .hero {
   display: grid;
-  grid-template-columns: 456px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 190px minmax(0, 1fr);
   align-items: center;
-  gap: 34px;
+  gap: 24px;
   margin-bottom: 42px;
 }
 
 
 /* =====================================================
-   HERO VIDEO (REMOVED BLACK SIDE BORDERS)
+   JOINING WRITING TEXT (LEFT SIDE)
+   ===================================================== */
+
+.hero-cursive-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.line-green {
+  color: #15803d; /* Vibrant Green */
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  margin-bottom: 0;
+}
+
+.line-orange {
+  color: #ea580c; /* Vibrant Orange */
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  margin-top: 0;
+}
+
+
+/* =====================================================
+   HERO VIDEO (NO EXCESS BLACK BORDERS)
    ===================================================== */
 
 .hero-media {
-  width: 456px;
-  height: 223px;
+  width: 190px;
+  height: 338px;
   overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
+  border-radius: 12px;
+  background: transparent;
 }
 
 .hero-video {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover; /* Fills entire box width without side borders */
-  background: #000000;
+  object-fit: cover; /* Fills vertical box with zero side borders */
 }
 
 
 /* =====================================================
-   HERO TEXT
+   HERO TEXT & CTA (RIGHT SIDE)
    ===================================================== */
-
-.hero-text h1 {
-  margin: 0 0 14px;
-  font-size: clamp(1.8rem, 3vw, 2.45rem);
-  line-height: 1.15;
-}
 
 .hero-text p {
   margin: 0 0 18px;
   color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .cta {
@@ -351,24 +373,18 @@ main.container {
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .hero-cursive-text {
+    align-items: center;
   }
 
   .hero-media {
-    width: 456px;
-    max-width: 100%;
-    height: 223px;
-    margin-inline: auto;
-  }
-
-  .hero-video {
-    width: 100%;
-    max-width: 100%;
-    height: 223px;
-  }
-
-  .hero-text {
-    text-align: center;
+    width: 190px;
+    height: 338px;
   }
 
   .preview-grid {
@@ -419,18 +435,8 @@ main.container {
     margin-bottom: 32px;
   }
 
-  .hero-media {
-    width: 100%;
-    height: 223px;
-  }
-
-  .hero-video {
-    width: 100%;
-    height: 223px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.75rem;
+  .line-green, .line-orange {
+    font-size: 2rem;
   }
 
   .preview-grid {
