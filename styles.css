@@ -222,9 +222,9 @@ main.container {
    ===================================================== */ 
  
 .hero-media { 
-  width: 2.08in; 
-  height: 2.40in; 
-  flex: 0 0 2.08in; 
+  width: 2.12in; 
+  height: 2.75in; 
+  flex: 0 0 2.12in; 
  
   overflow: hidden; 
   border: none; 
@@ -710,9 +710,9 @@ main.container {
   } 
  
   .hero-media { 
-    width: 2.08in; 
-    height: 2.40in; 
-    flex-basis: 2.08in; 
+    width: 2.12in; 
+    height: 2.75in; 
+    flex-basis: 2.12in; 
   } 
  
   .academic-writing-box { 
