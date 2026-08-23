@@ -1,5 +1,7 @@
 :root {
   --accent: #0b76ff;
+  --green: #16a34a;
+  --orange: #f97316;
   --bg: #ffffff;
   --muted: #6b7280;
   --header-bg: #0f1720;
@@ -49,7 +51,7 @@ a {
 }
 
 .header-top {
-  min-height: 82px;
+  min-height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,13 +61,17 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
 }
 
+/* LOGO:
+   Width  = 1.00" ≈ 96px
+   Height = 1.01" ≈ 97px
+*/
 .logo-img {
-  width: 52px;
-  height: 52px;
+  width: 96px;
+  height: 97px;
   object-fit: contain;
   display: block;
 }
@@ -136,69 +142,78 @@ main.container {
    ===================================================== */
 
 .hero {
-  display: grid;
-  grid-template-columns: 456px minmax(0, 1fr);
+  display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 24px;
   margin-bottom: 42px;
 }
 
 
 /* =====================================================
-   HERO VIDEO
-   EXACT SIZE:
-   WIDTH  = 4.75 inches ≈ 456px
-   HEIGHT = 2.32 inches ≈ 223px
+   WELCOME TEXT
+   Height = 2.30" ≈ 221px
+   ===================================================== */
+
+.hero-welcome {
+  width: auto;
+  height: 221px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.hero-welcome-line {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-welcome-green {
+  color: var(--green);
+}
+
+.hero-welcome-orange {
+  color: var(--orange);
+}
+
+
+/* =====================================================
+   VIDEO BOX
+   Width  = 1.20" ≈ 115px
+   Height = 2.30" ≈ 221px
    ===================================================== */
 
 .hero-media {
-  width: 456px;
-  height: 223px;
+  width: 115px;
+  height: 221px;
+  flex: 0 0 115px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #000000;
 }
 
 .hero-video {
-  width: 456px;
-  height: 223px;
+  width: 115px;
+  height: 221px;
   display: block;
-
-  /* SHOW THE COMPLETE VIDEO */
-  object-fit: contain;
-
+  object-fit: cover;
   background: #000000;
 }
 
 
 /* =====================================================
-   HERO TEXT
+   OLD HERO TEXT — HIDDEN
    ===================================================== */
 
-.hero-text h1 {
-  margin: 0 0 14px;
-  font-size: clamp(1.8rem, 3vw, 2.45rem);
-  line-height: 1.15;
-}
-
-.hero-text p {
-  margin: 0 0 18px;
-  color: var(--muted);
-}
-
-.cta {
-  display: inline-block;
-  background: var(--accent);
-  color: #ffffff;
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 7px;
-  font-weight: 700;
-  transition: opacity 0.2s ease;
-}
-
-.cta:hover {
-  opacity: 0.88;
+.hero-text {
+  display: none;
 }
 
 
@@ -349,31 +364,21 @@ main.container {
 
 
 /* =====================================================
-   RESPONSIVE — TABLET
+   TABLET
    ===================================================== */
 
 @media (max-width: 900px) {
 
   .hero {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
-  .hero-media {
-    width: 456px;
-    max-width: 100%;
-    height: 223px;
-    margin-inline: auto;
+  .hero-welcome {
+    height: 221px;
   }
 
-  .hero-video {
-    width: 456px;
-    max-width: 100%;
-    height: 223px;
-  }
-
-  .hero-text {
-    text-align: center;
+  .hero-welcome-line {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
   }
 
   .preview-grid {
@@ -383,7 +388,7 @@ main.container {
 
 
 /* =====================================================
-   RESPONSIVE — MOBILE
+   MOBILE
    ===================================================== */
 
 @media (max-width: 600px) {
@@ -393,12 +398,12 @@ main.container {
   }
 
   .header-top {
-    min-height: 72px;
+    min-height: 105px;
   }
 
   .logo-img {
-    width: 46px;
-    height: 46px;
+    width: 96px;
+    height: 97px;
   }
 
   .site-title {
@@ -421,21 +426,28 @@ main.container {
   }
 
   .hero {
+    gap: 12px;
     margin-bottom: 32px;
   }
 
+  .hero-welcome {
+    height: 221px;
+  }
+
+  .hero-welcome-line {
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+    white-space: normal;
+  }
+
   .hero-media {
-    width: 100%;
-    height: 223px;
+    width: 115px;
+    height: 221px;
+    flex: 0 0 115px;
   }
 
   .hero-video {
-    width: 100%;
-    height: 223px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.75rem;
+    width: 115px;
+    height: 221px;
   }
 
   .preview-grid {
