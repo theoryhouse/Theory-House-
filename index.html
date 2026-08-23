@@ -16,7 +16,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css"
+    href="styles.css"
   >
 
 </head>
@@ -83,20 +83,22 @@
         </a>
 
 
+        <!-- SEPARATOR -->
+
+        <span class="header-separator">
+          |
+        </span>
+
+
         <!-- PHONE ICON -->
 
-        <a
-          class="contact-icon"
-          href="tel:+923126707306"
-          aria-label="Call Theory House"
-          title="Call"
+        <span
+          class="header-phone"
+          aria-hidden="true"
+          title="Phone"
         >
-
-          <span class="header-phone-icon">
-            ☎
-          </span>
-
-        </a>
+          📞
+        </span>
 
 
       </div>
@@ -105,8 +107,6 @@
     </div>
 
 
-
-    <!-- NAVIGATION -->
 
     <nav
       class="site-nav container"
@@ -144,39 +144,38 @@
 
 
     <!-- ===================================================
-         HOME HERO
+         HOME HERO — THREE BOXES
          =================================================== -->
 
-    <section class="hero">
+    <section
+      class="hero"
+      aria-label="Theory House introduction"
+    >
 
 
       <!-- =================================================
-           WELCOMING BOX
-           EXACTLY AS REQUESTED
+           BOX 1 — WELCOMING
            ================================================= -->
 
       <div class="hero-welcome">
 
 
-        <p class="hero-welcome-line hero-welcome-green">
+        <p class="hero-welcome-line hero-welcome-green welcome-first">
           Welcome to the
         </p>
 
 
-        <p class="hero-welcome-line hero-welcome-green">
+        <p class="hero-welcome-line hero-welcome-green welcome-second">
           Theory House🪄
         </p>
 
 
-        <p
-          class="hero-welcome-line hero-welcome-orange"
-          style="margin-top: 3pt;"
-        >
+        <p class="hero-welcome-line hero-welcome-orange welcome-third">
           How Can We
         </p>
 
 
-        <p class="hero-welcome-line hero-welcome-orange">
+        <p class="hero-welcome-line hero-welcome-orange welcome-fourth">
           Help You?
         </p>
 
@@ -186,8 +185,7 @@
 
 
       <!-- =================================================
-           VIDEO BOX
-           2.08" × 2.40"
+           BOX 2 — VIDEO
            ================================================= -->
 
       <div
@@ -222,48 +220,23 @@
 
 
       <!-- =================================================
-           ACADEMIC WRITING DATA BOX
+           BOX 3 — ACADEMIC WRITING DATA
            ================================================= -->
 
-      <div class="academic-writing-box">
+      <div class="hero-academic">
 
 
-        <!-- HEADING -->
-
-        <div class="academic-writing-heading">
-
-          <div>
-            Academic Writing &
-          </div>
-
-          <div>
-            Research Support
-          </div>
-
-        </div>
+        <h1 class="hero-academic-heading">
+          Academic Writing &amp;<br>
+          Research Support
+        </h1>
 
 
-        <!-- DESCRIPTION -->
-
-        <div class="academic-writing-text">
-
-          <div>
-            We provide thesis writing, proposal drafting,
-          </div>
-
-          <div>
-            business reports, and medical reports
-          </div>
-
-          <div>
-            with detailed, well-researched,
-          </div>
-
-          <div>
-            and tailored to your needs.
-          </div>
-
-        </div>
+        <p class="hero-academic-description">
+          We provide thesis writing, proposal drafting,<br>
+          business reports, and medical reports<br>
+          with detailed, well-researched, and tailored to your needs.
+        </p>
 
 
       </div>
@@ -460,7 +433,7 @@
 
 
 
-        <!-- WHATSAPP / PHONE -->
+        <!-- WHATSAPP -->
 
         <p class="whatsapp-contact footer-whatsapp">
 
@@ -470,8 +443,8 @@
           </span>
 
 
-          <span class="footer-phone-icon">
-            ☎
+          <span class="whatsapp-phone">
+            📞
           </span>
 
 
