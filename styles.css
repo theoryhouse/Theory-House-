@@ -3,6 +3,7 @@
   --green: #548235;
   --orange: #f97316;
   --medium-green: #70ad47;
+  --bright-green: #7CFC00;
   --blue-gray: #5b6573;
   --dark-gray: #404040;
   --light-orange: #fce4d6;
@@ -13,6 +14,11 @@
   --text: #0b1720;
   --max-width: 980px;
 }
+
+
+/* =====================================================
+   BASIC RESET
+   ===================================================== */
 
 * {
   box-sizing: border-box;
@@ -69,6 +75,9 @@ a {
   text-decoration: none;
 }
 
+
+/* LOGO */
+
 .logo-img {
   width: 96px;
   height: 97px;
@@ -85,7 +94,6 @@ a {
 .header-contacts {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .contact-icon {
@@ -98,17 +106,19 @@ a {
 }
 
 .header-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 25px;
   line-height: 1;
-  color: #00ff00;
+  color: var(--bright-green);
+  text-decoration: none;
 }
 
-.header-separator {
+.header-divider {
   color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-  margin-left: 2px;
-  margin-right: 2px;
+  font-size: 20px;
+  margin: 0 14px;
 }
 
 .icon {
@@ -116,8 +126,8 @@ a {
 }
 
 .email-icon {
-  color: #ffff00 !important;
-  fill: #ffff00 !important;
+  color: #ffff00;
+  fill: currentColor;
 }
 
 .site-nav {
@@ -153,72 +163,49 @@ main.container {
 
 
 /* =====================================================
-   HOME HERO — THREE BOXES
+   HOME HERO
    ===================================================== */
 
 .hero {
   display: flex;
   align-items: center;
-  gap: 0.8cm;
   width: 100%;
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-  padding: 0;
-  overflow: visible;
+  margin-bottom: 42px;
 }
 
 
 /* =====================================================
-   WELCOME BOX
-   WIDTH = 2.17"
-   HEIGHT = 1.33"
+   WELCOMING BOX
    ===================================================== */
 
 .hero-welcome {
   width: 2.17in;
-  min-width: 2.17in;
   height: 1.33in;
-  min-height: 1.33in;
-
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-  padding: 0;
+  flex: 0 0 2.17in;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 
+  margin-top: 12pt;
+  margin-bottom: 12pt;
+
+  padding: 0;
   border: none;
-  overflow: visible;
+  background: transparent;
 }
 
 .hero-welcome-line {
   margin: 0;
   padding: 0;
+  line-height: 1;
 
   font-family: "Segoe Script", "Brush Script MT", cursive;
   font-size: 35px;
   font-weight: 700;
 
-  line-height: 1;
   white-space: nowrap;
-}
-
-.hero-welcome-line.welcome-first {
-  margin: 0;
-}
-
-.hero-welcome-line.welcome-second {
-  margin: 0;
-}
-
-.hero-welcome-line.welcome-third {
-  margin-top: 3pt;
-}
-
-.hero-welcome-line.welcome-fourth {
-  margin: 0;
 }
 
 .hero-welcome-green {
@@ -232,87 +219,81 @@ main.container {
 
 /* =====================================================
    VIDEO BOX
-   WIDTH = 1.50"
-   HEIGHT = 2.10"
    ===================================================== */
 
 .hero-media {
-  width: 1.5in;
-  min-width: 1.5in;
-  height: 2.10in;
-  min-height: 2.10in;
-
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-  padding: 0;
+  width: 2.05in;
+  height: 2.20in;
+  flex: 0 0 2.05in;
 
   overflow: hidden;
   border: none;
-  border-radius: 0;
-
+  border-radius: 8px;
   background: #000000;
+
+  margin-top: 12pt;
+  margin-bottom: 12pt;
+
+  margin-left: 3cm;
+  margin-right: 1.5cm;
 }
 
 .hero-video {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
-  object-position: center;
-
   background: #000000;
+}
+
+.hero-text {
+  display: none;
 }
 
 
 /* =====================================================
    ACADEMIC WRITING DATA BOX
-   WIDTH = 3.47"
-   HEIGHT = 1.45"
    ===================================================== */
 
-.hero-academic {
+.academic-writing-box {
   width: 3.47in;
-  min-width: 3.47in;
   height: 1.45in;
-  min-height: 1.45in;
+  flex: 0 0 3.47in;
 
   margin-top: 12pt;
   margin-bottom: 12pt;
+
   padding: 0;
-
   border: none;
-  overflow: visible;
+  background: transparent;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  overflow: visible;
 }
 
-.hero-academic-heading {
+.academic-writing-heading {
   margin: 0;
   padding: 0;
 
-  color: #000000;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 700;
+  color: #000000;
 
   line-height: 1;
+  white-space: nowrap;
 }
 
-.hero-academic-description {
-  margin: 4pt 0 0 0;
+.academic-writing-description {
+  margin: 4pt 0 0;
   padding: 0;
 
-  color: #f97316;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: 400;
+  color: var(--orange);
 
   line-height: 1;
+  white-space: nowrap;
 }
 
 
@@ -323,11 +304,9 @@ main.container {
 .about-title {
   margin-top: 24px;
   margin-bottom: 14px;
-
   font-family: "Lucida Handwriting", "Brush Script MT", cursive;
   font-size: 40px;
   font-weight: 700;
-
   color: #ff0000;
   line-height: 1.2;
 }
@@ -335,11 +314,9 @@ main.container {
 .about-heading {
   margin-top: 24px;
   margin-bottom: 14px;
-
   font-family: "Lucida Handwriting", "Brush Script MT", cursive;
   font-size: 40px;
   font-weight: 700;
-
   color: #ff0000;
   line-height: 1.2;
 }
@@ -363,11 +340,9 @@ main.container {
 .services-title {
   margin-top: 0;
   margin-bottom: 24px;
-
   font-family: "Arial Black", Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 900;
-
   color: var(--blue-gray);
   line-height: 1.2;
 }
@@ -380,11 +355,9 @@ main.container {
 .contact-title {
   margin-top: 0;
   margin-bottom: 18px;
-
   font-family: Algerian, "Arial Black", Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 700;
-
   color: #548235;
   line-height: 1.2;
 }
@@ -394,7 +367,7 @@ main.container {
 }
 
 
-/* EMAIL */
+/* EMAIL CONTACT */
 
 .contact-page-email {
   display: flex;
@@ -417,7 +390,7 @@ main.container {
 }
 
 
-/* WHATSAPP */
+/* WHATSAPP CONTACT */
 
 .contact-page-whatsapp {
   display: flex;
@@ -526,20 +499,19 @@ main.container {
   width: 100%;
   margin-top: 6px;
   padding: 10px 12px;
-
   border: 1px solid #d1d5db;
   border-radius: 6px;
-
   background: #ffffff;
   color: #111827;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
 .contact-form select {
-  color: var(--orange);
   border-color: var(--orange);
+  background: #f97316;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .contact-form input:focus,
@@ -556,21 +528,17 @@ main.container {
 .contact-form button {
   border: none;
   border-radius: 6px;
-
   padding: 10px 20px;
-
-  background: var(--light-orange);
-  color: #c55a11;
-
+  background: #f97316;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
-
   cursor: pointer;
 }
 
 .contact-form button:hover {
-  background: #f8d3bd;
+  background: #ea580c;
 }
 
 
@@ -675,11 +643,6 @@ main.container {
   gap: 8px;
 }
 
-.footer-contact .email-icon {
-  color: #ffff00 !important;
-  fill: #ffff00 !important;
-}
-
 .footer-contact a {
   color: #ffffff;
   text-decoration: none;
@@ -697,9 +660,9 @@ main.container {
 }
 
 .whatsapp-phone {
-  color: #00ff00 !important;
   font-size: 18px;
   line-height: 1;
+  color: var(--bright-green);
 }
 
 .whatsapp-number {
@@ -735,18 +698,33 @@ main.container {
    TABLET
    ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
   .hero {
-    gap: 0.8cm;
+    flex-wrap: nowrap;
   }
 
-  .hero-academic-heading {
-    font-size: 32px;
+  .hero-welcome {
+    width: 2.17in;
+    flex-basis: 2.17in;
   }
 
-  .hero-academic-description {
-    font-size: 22px;
+  .hero-media {
+    width: 2.05in;
+    flex-basis: 2.05in;
+  }
+
+  .academic-writing-box {
+    width: 3.47in;
+    flex-basis: 3.47in;
+  }
+
+  .academic-writing-heading {
+    font-size: 34px;
+  }
+
+  .academic-writing-description {
+    font-size: 25px;
   }
 
   .preview-grid {
@@ -758,6 +736,42 @@ main.container {
 /* =====================================================
    MOBILE
    ===================================================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-welcome,
+  .hero-media,
+  .academic-writing-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-media {
+    margin-top: 12pt;
+  }
+
+  .academic-writing-box {
+    margin-top: 12pt;
+  }
+
+  .hero-welcome {
+    flex: 0 0 auto;
+  }
+
+  .hero-media {
+    flex: 0 0 auto;
+  }
+
+  .academic-writing-box {
+    flex: 0 0 auto;
+  }
+}
+
 
 @media (max-width: 600px) {
 
@@ -793,55 +807,21 @@ main.container {
     padding-bottom: 32px;
   }
 
-
-  /* Keep the three hero boxes together */
-
   .hero {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.8cm;
-    width: max-content;
-    max-width: none;
-    overflow: visible;
-  }
-
-  .hero-welcome {
-    width: 2.17in;
-    min-width: 2.17in;
-    height: 1.33in;
-    min-height: 1.33in;
+    gap: 0;
+    margin-bottom: 32px;
   }
 
   .hero-welcome-line {
     font-size: 35px;
   }
 
-  .hero-media {
-    width: 1.5in;
-    min-width: 1.5in;
-    height: 2.10in;
-    min-height: 2.10in;
+  .academic-writing-heading {
+    font-size: 34px;
   }
 
-  .hero-video {
-    width: 100%;
-    height: 100%;
-  }
-
-  .hero-academic {
-    width: 3.47in;
-    min-width: 3.47in;
-    height: 1.45in;
-    min-height: 1.45in;
-  }
-
-  .hero-academic-heading {
-    font-size: 40px;
-  }
-
-  .hero-academic-description {
-    font-size: 30px;
+  .academic-writing-description {
+    font-size: 25px;
   }
 
   .preview-grid {
