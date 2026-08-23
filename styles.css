@@ -218,13 +218,14 @@ main.container {
  
  
 /* ===================================================== 
-   VIDEO BOX 
+   VIDEO BOX
+   ONLY VIDEO BOX ADJUSTMENT
    ===================================================== */ 
  
 .hero-media { 
-  width: 2.12in; 
-  height: 2.75in; 
-  flex: 0 0 2.12in; 
+  width: 2.15in; 
+  height: 3.35in; 
+  flex: 0 0 2.15in; 
  
   overflow: hidden; 
   border: none; 
@@ -710,9 +711,9 @@ main.container {
   } 
  
   .hero-media { 
-    width: 2.12in; 
-    height: 2.75in; 
-    flex-basis: 2.12in; 
+    width: 2.15in; 
+    height: 3.35in; 
+    flex-basis: 2.15in; 
   } 
  
   .academic-writing-box { 
