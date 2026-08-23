@@ -1,845 +1,847 @@
-:root {
-  --accent: #0b76ff;
-  --green: #548235;
-  --orange: #f97316;
-  --medium-green: #70ad47;
-  --bright-green: #7CFC00;
-  --blue-gray: #5b6573;
-  --dark-gray: #404040;
-  --light-orange: #fce4d6;
-  --bg: #ffffff;
-  --muted: #6b7280;
-  --header-bg: #0f1720;
-  --card-bg: #f8fafc;
-  --text: #0b1720;
-  --max-width: 980px;
-}
-
-
-/* =====================================================
-   BASIC RESET
-   ===================================================== */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: inherit;
-}
-
-.container {
-  width: min(100% - 32px, var(--max-width));
-  margin-inline: auto;
-}
-
-
-/* =====================================================
-   HEADER
-   ===================================================== */
-
-.site-header {
-  background: var(--header-bg);
-  color: #ffffff;
-}
-
-.header-top {
-  min-height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-}
-
-
-/* LOGO */
-
-.logo-img {
-  width: 96px;
-  height: 97px;
-  object-fit: contain;
-  display: block;
-}
-
-.site-title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-.header-contacts {
-  display: flex;
-  align-items: center;
-}
-
-.contact-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  text-decoration: none;
-}
-
-.header-phone {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  line-height: 1;
-  color: var(--bright-green);
-  text-decoration: none;
-}
-
-.header-divider {
-  color: #ffffff;
-  font-size: 20px;
-  margin: 0 14px;
-}
-
-.icon {
-  display: block;
-}
-
-.email-icon {
-  color: #ffff00;
-  fill: currentColor;
-}
-
-.site-nav {
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 34px;
-}
-
-.site-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.98rem;
-  padding: 10px 4px;
-  transition: opacity 0.2s ease;
-}
-
-.site-nav a:hover {
-  opacity: 0.75;
-}
-
-
-/* =====================================================
-   MAIN
-   ===================================================== */
-
-main.container {
-  padding-top: 34px;
-  padding-bottom: 42px;
-}
-
-
-/* =====================================================
-   HOME HERO
-   ===================================================== */
-
-.hero {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 42px;
-}
-
-
-/* =====================================================
-   WELCOMING BOX
-   ===================================================== */
-
-.hero-welcome {
-  width: 2.17in;
-  height: 1.33in;
-  flex: 0 0 2.17in;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-
-  padding: 0;
-  border: none;
-  background: transparent;
-}
-
-.hero-welcome-line {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-
-  font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 35px;
-  font-weight: 700;
-
-  white-space: nowrap;
-}
-
-.hero-welcome-green {
-  color: #16a34a;
-}
-
-.hero-welcome-orange {
-  color: var(--orange);
-}
-
-
-/* =====================================================
-   VIDEO BOX
-   ===================================================== */
-
-.hero-media {
-  width: 2.05in;
-  height: 2.20in;
-  flex: 0 0 2.05in;
-
-  overflow: hidden;
-  border: none;
-  border-radius: 8px;
-  background: #000000;
-
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-
-  margin-left: 3cm;
-  margin-right: 1.5cm;
-}
-
-.hero-video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  background: #000000;
-}
-
-.hero-text {
-  display: none;
-}
-
-
-/* =====================================================
-   ACADEMIC WRITING DATA BOX
-   ===================================================== */
-
-.academic-writing-box {
-  width: 3.47in;
-  height: 1.45in;
-  flex: 0 0 3.47in;
-
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-
-  padding: 0;
-  border: none;
-  background: transparent;
-
-  overflow: visible;
-}
-
-.academic-writing-heading {
-  margin: 0;
-  padding: 0;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: #000000;
-
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.academic-writing-description {
-  margin: 4pt 0 0;
-  padding: 0;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  color: var(--orange);
-
-  line-height: 1;
-  white-space: nowrap;
-}
-
-
-/* =====================================================
-   ABOUT PAGE
-   ===================================================== */
-
-.about-title {
-  margin-top: 24px;
-  margin-bottom: 14px;
-  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
-  font-size: 40px;
-  font-weight: 700;
-  color: #ff0000;
-  line-height: 1.2;
-}
-
-.about-heading {
-  margin-top: 24px;
-  margin-bottom: 14px;
-  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
-  font-size: 40px;
-  font-weight: 700;
-  color: #ff0000;
-  line-height: 1.2;
-}
-
-.about-hero {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.about-hero-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-
-/* =====================================================
-   SERVICES PAGE
-   ===================================================== */
-
-.services-title {
-  margin-top: 0;
-  margin-bottom: 24px;
-  font-family: "Arial Black", Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-  color: var(--blue-gray);
-  line-height: 1.2;
-}
-
-
-/* =====================================================
-   CONTACT PAGE
-   ===================================================== */
-
-.contact-title {
-  margin-top: 0;
-  margin-bottom: 18px;
-  font-family: Algerian, "Arial Black", Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: #548235;
-  line-height: 1.2;
-}
-
-.contact-intro {
-  margin: 0 0 18px;
-}
-
-
-/* EMAIL CONTACT */
-
-.contact-page-email {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin: 10px 0;
-}
-
-.contact-email-icon {
-  font-size: 25px;
-  line-height: 1;
-  color: #ff69b4;
-}
-
-.contact-page-email a {
-  color: #0000ff;
-  font-size: 25px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-
-/* WHATSAPP CONTACT */
-
-.contact-page-whatsapp {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 10px 0;
-  font-size: 25px;
-}
-
-.contact-whatsapp-label {
-  color: var(--medium-green);
-  font-size: 25px;
-  font-weight: 700;
-}
-
-.contact-whatsapp-icon {
-  font-size: 25px;
-  line-height: 1;
-}
-
-.contact-whatsapp-number {
-  color: var(--dark-gray);
-  font-size: 25px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.contact-whatsapp-separator {
-  color: var(--dark-gray);
-  font-size: 25px;
-  font-weight: 700;
-}
-
-
-/* WORKING HOURS */
-
-.contact-page-working {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 10px 0 24px;
-  font-size: 25px;
-}
-
-.contact-working-label {
-  color: #ff0000;
-  font-size: 25px;
-  font-weight: 700;
-}
-
-.contact-working-icon {
-  font-size: 25px;
-  line-height: 1;
-}
-
-.contact-working-days {
-  color: #000000;
-  font-size: 25px;
-  font-weight: 400;
-}
-
-.contact-working-separator {
-  color: var(--dark-gray);
-  font-size: 25px;
-  font-weight: 700;
-}
-
-.contact-working-hours {
-  color: var(--dark-gray);
-  font-size: 25px;
-  font-weight: 700;
-}
-
-
-/* REQUEST A QUOTE */
-
-.contact-form-title {
-  margin-top: 26px;
-  margin-bottom: 18px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-
-/* FORM */
-
-.contact-form {
-  width: 100%;
-  max-width: 700px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 16px;
-  color: #000000;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  display: block;
-  width: 100%;
-  margin-top: 6px;
-  padding: 10px 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  background: #ffffff;
-  color: #111827;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-}
-
-.contact-form select {
-  border-color: var(--orange);
-  background: #f97316;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  outline: 2px solid rgba(249, 115, 22, 0.25);
-  border-color: var(--orange);
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form button {
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  background: #f97316;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background: #ea580c;
-}
-
-
-/* =====================================================
-   SERVICES / ABOUT CARDS
-   ===================================================== */
-
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.preview-grid > .sr-only {
-  grid-column: 1 / -1;
-}
-
-.card {
-  background: var(--card-bg);
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card-media {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-}
-
-.card-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 18px;
-}
-
-.card-body h3 {
-  margin: 0 0 8px;
-  font-size: 1.08rem;
-  line-height: 1.3;
-}
-
-.card-body p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.94rem;
-}
-
-
-/* =====================================================
-   ACCESSIBILITY
-   ===================================================== */
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-.site-footer {
-  background: var(--header-bg);
-  color: #ffffff;
-  margin-top: 20px;
-}
-
-.footer-inner {
-  padding-top: 28px;
-  padding-bottom: 24px;
-}
-
-.footer-block > strong {
-  display: block;
-  margin-bottom: 14px;
-  font-size: 1.05rem;
-}
-
-.contact-line,
-.whatsapp-contact,
-.working-line {
-  margin: 8px 0;
-}
-
-.footer-contact {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer-contact a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer-whatsapp {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.whatsapp-label {
-  font-weight: 700;
-}
-
-.whatsapp-phone {
-  font-size: 18px;
-  line-height: 1;
-  color: var(--bright-green);
-}
-
-.whatsapp-number {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.working-line {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.working-label {
-  font-weight: 700;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding-top: 14px;
-  padding-bottom: 14px;
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: #cbd5e1;
-  font-size: 0.9rem;
-}
-
-
-/* =====================================================
-   TABLET
-   ===================================================== */
-
-@media (max-width: 1200px) {
-
-  .hero {
-    flex-wrap: nowrap;
-  }
-
-  .hero-welcome {
-    width: 2.17in;
-    flex-basis: 2.17in;
-  }
-
-  .hero-media {
-    width: 2.05in;
-    flex-basis: 2.05in;
-  }
-
-  .academic-writing-box {
-    width: 3.47in;
-    flex-basis: 3.47in;
-  }
-
-  .academic-writing-heading {
-    font-size: 34px;
-  }
-
-  .academic-writing-description {
-    font-size: 25px;
-  }
-
-  .preview-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media (max-width: 900px) {
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-welcome,
-  .hero-media,
-  .academic-writing-box {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .hero-media {
-    margin-top: 12pt;
-  }
-
-  .academic-writing-box {
-    margin-top: 12pt;
-  }
-
-  .hero-welcome {
-    flex: 0 0 auto;
-  }
-
-  .hero-media {
-    flex: 0 0 auto;
-  }
-
-  .academic-writing-box {
-    flex: 0 0 auto;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .container {
-    width: min(100% - 24px, var(--max-width));
-  }
-
-  .header-top {
-    min-height: 105px;
-  }
-
-  .logo-img {
-    width: 96px;
-    height: 97px;
-  }
-
-  .site-title {
-    font-size: 1.15rem;
-  }
-
-  .site-nav {
-    gap: 18px;
-    flex-wrap: wrap;
-    min-height: 48px;
-  }
-
-  .site-nav a {
-    font-size: 0.9rem;
-  }
-
-  main.container {
-    padding-top: 24px;
-    padding-bottom: 32px;
-  }
-
-  .hero {
-    gap: 0;
-    margin-bottom: 32px;
-  }
-
-  .hero-welcome-line {
-    font-size: 35px;
-  }
-
-  .academic-writing-heading {
-    font-size: 34px;
-  }
-
-  .academic-writing-description {
-    font-size: 25px;
-  }
-
-  .preview-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-whatsapp,
-  .working-line {
-    align-items: flex-start;
-  }
-
-  .contact-page-email,
-  .contact-page-whatsapp,
-  .contact-page-working {
-    font-size: 25px;
-  }
-
-  .contact-form {
-    max-width: 100%;
-  }
+:root { 
+  --accent: #0b76ff; 
+  --green: #548235; 
+  --orange: #f97316; 
+  --medium-green: #70ad47; 
+  --bright-green: #7CFC00; 
+  --blue-gray: #5b6573; 
+  --dark-gray: #404040; 
+  --light-orange: #fce4d6; 
+  --bg: #ffffff; 
+  --muted: #6b7280; 
+  --header-bg: #0f1720; 
+  --card-bg: #f8fafc; 
+  --text: #0b1720; 
+  --max-width: 980px; 
+} 
+ 
+ 
+/* ===================================================== 
+   BASIC RESET 
+   ===================================================== */ 
+ 
+* { 
+  box-sizing: border-box; 
+} 
+ 
+html { 
+  scroll-behavior: smooth; 
+} 
+ 
+body { 
+  margin: 0; 
+  background: var(--bg); 
+  color: var(--text); 
+  font-family: Arial, Helvetica, sans-serif; 
+  line-height: 1.6; 
+} 
+ 
+img { 
+  max-width: 100%; 
+  height: auto; 
+} 
+ 
+a { 
+  color: inherit; 
+} 
+ 
+.container { 
+  width: min(100% - 32px, var(--max-width)); 
+  margin-inline: auto; 
+} 
+ 
+ 
+/* ===================================================== 
+   HEADER 
+   ===================================================== */ 
+ 
+.site-header { 
+  background: var(--header-bg); 
+  color: #ffffff; 
+} 
+ 
+.header-top { 
+  min-height: 110px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 20px; 
+} 
+ 
+.brand { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 14px; 
+  text-decoration: none; 
+} 
+ 
+ 
+/* LOGO */ 
+ 
+.logo-img { 
+  width: 96px; 
+  height: 97px; 
+  object-fit: contain; 
+  display: block; 
+} 
+ 
+.site-title { 
+  font-size: 1.35rem; 
+  font-weight: 700; 
+  letter-spacing: 0.2px; 
+} 
+ 
+.header-contacts { 
+  display: flex; 
+  align-items: center; 
+} 
+ 
+.contact-icon { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 38px; 
+  height: 38px; 
+  text-decoration: none; 
+} 
+ 
+.header-phone { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 25px; 
+  line-height: 1; 
+  color: var(--bright-green); 
+  text-decoration: none; 
+} 
+ 
+.header-divider { 
+  color: #ffffff; 
+  font-size: 20px; 
+  margin: 0 14px; 
+} 
+ 
+.icon { 
+  display: block; 
+} 
+ 
+.email-icon { 
+  color: #ffff00; 
+  fill: currentColor; 
+} 
+ 
+.site-nav { 
+  min-height: 52px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 34px; 
+} 
+ 
+.site-nav a { 
+  color: #ffffff; 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 0.98rem; 
+  padding: 10px 4px; 
+  transition: opacity 0.2s ease; 
+} 
+ 
+.site-nav a:hover { 
+  opacity: 0.75; 
+} 
+ 
+ 
+/* ===================================================== 
+   MAIN 
+   ===================================================== */ 
+ 
+main.container { 
+  padding-top: 34px; 
+  padding-bottom: 42px; 
+} 
+ 
+ 
+/* ===================================================== 
+   HOME HERO 
+   ===================================================== */ 
+ 
+.hero { 
+  display: flex; 
+  align-items: center; 
+  width: 100%; 
+  margin-bottom: 42px; 
+} 
+ 
+ 
+/* ===================================================== 
+   WELCOMING BOX 
+   ===================================================== */ 
+ 
+.hero-welcome { 
+  width: 2.17in; 
+  height: 1.33in; 
+  flex: 0 0 2.17in; 
+ 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+ 
+  margin-top: 12pt; 
+  margin-bottom: 12pt; 
+ 
+  padding: 0; 
+  border: none; 
+  background: transparent; 
+} 
+ 
+.hero-welcome-line { 
+  margin: 0; 
+  padding: 0; 
+  line-height: 1; 
+ 
+  font-family: "Segoe Script", "Brush Script MT", cursive; 
+  font-size: 35px; 
+  font-weight: 700; 
+ 
+  white-space: nowrap; 
+} 
+ 
+.hero-welcome-green { 
+  color: #16a34a; 
+} 
+ 
+.hero-welcome-orange { 
+  color: var(--orange); 
+} 
+ 
+ 
+/* ===================================================== 
+   VIDEO BOX 
+   ===================================================== */ 
+ 
+.hero-media { 
+  width: 2.08in; 
+  height: 2.40in; 
+  flex: 0 0 2.08in; 
+ 
+  overflow: hidden; 
+  border: none; 
+  border-radius: 8px; 
+  background: #000000; 
+ 
+  margin-top: 12pt; 
+  margin-bottom: 12pt; 
+ 
+  margin-left: 3cm; 
+  margin-right: 1.5cm; 
+} 
+ 
+.hero-video { 
+  width: 100%; 
+  height: 100%; 
+  display: block; 
+  object-fit: cover; 
+  background: #000000; 
+} 
+ 
+.hero-text { 
+  display: none; 
+} 
+ 
+ 
+/* ===================================================== 
+   ACADEMIC WRITING DATA BOX 
+   ===================================================== */ 
+ 
+.academic-writing-box { 
+  width: 3.47in; 
+  height: 1.45in; 
+  flex: 0 0 3.47in; 
+ 
+  margin-top: 12pt; 
+  margin-bottom: 12pt; 
+ 
+  padding: 0; 
+  border: none; 
+  background: transparent; 
+ 
+  overflow: visible; 
+} 
+ 
+.academic-writing-heading { 
+  margin: 0; 
+  padding: 0; 
+ 
+  font-family: "Arial Black", Arial, Helvetica, sans-serif; 
+  font-size: 40px; 
+  font-weight: 900; 
+  color: #000000; 
+ 
+  line-height: 1; 
+  white-space: nowrap; 
+} 
+ 
+.academic-writing-description { 
+  margin: 4pt 0 0; 
+  padding: 0; 
+ 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 25px; 
+  font-weight: 400; 
+  color: #C65911; 
+ 
+  line-height: 1; 
+  white-space: nowrap; 
+} 
+ 
+ 
+/* ===================================================== 
+   ABOUT PAGE 
+   ===================================================== */ 
+ 
+.about-title { 
+  margin-top: 24px; 
+  margin-bottom: 14px; 
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive; 
+  font-size: 40px; 
+  font-weight: 700; 
+  color: #ff0000; 
+  line-height: 1.2; 
+} 
+ 
+.about-heading { 
+  margin-top: 24px; 
+  margin-bottom: 14px; 
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive; 
+  font-size: 40px; 
+  font-weight: 700; 
+  color: #ff0000; 
+  line-height: 1.2; 
+} 
+ 
+.about-hero { 
+  width: 100%; 
+  margin-bottom: 20px; 
+} 
+ 
+.about-hero-img { 
+  width: 100%; 
+  display: block; 
+  object-fit: cover; 
+} 
+ 
+ 
+/* ===================================================== 
+   SERVICES PAGE 
+   ===================================================== */ 
+ 
+.services-title { 
+  margin-top: 0; 
+  margin-bottom: 24px; 
+  font-family: "Arial Black", Arial, Helvetica, sans-serif; 
+  font-size: 40px; 
+  font-weight: 900; 
+  color: var(--blue-gray); 
+  line-height: 1.2; 
+} 
+ 
+ 
+/* ===================================================== 
+   CONTACT PAGE 
+   ===================================================== */ 
+ 
+.contact-title { 
+  margin-top: 0; 
+  margin-bottom: 18px; 
+  font-family: Algerian, "Arial Black", Arial, Helvetica, sans-serif; 
+  font-size: 40px; 
+  font-weight: 700; 
+  color: #548235; 
+  line-height: 1.2; 
+} 
+ 
+.contact-intro { 
+  margin: 0 0 18px; 
+} 
+ 
+ 
+/* EMAIL CONTACT */ 
+ 
+.contact-page-email { 
+  display: flex; 
+  align-items: center; 
+  gap: 7px; 
+  margin: 10px 0; 
+} 
+ 
+.contact-email-icon { 
+  font-size: 25px; 
+  line-height: 1; 
+  color: #ff69b4; 
+} 
+ 
+.contact-page-email a { 
+  color: #0000ff; 
+  font-size: 25px; 
+  font-weight: 700; 
+  text-decoration: none; 
+} 
+ 
+ 
+/* WHATSAPP CONTACT */ 
+ 
+.contact-page-whatsapp { 
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 7px; 
+  margin: 10px 0; 
+  font-size: 25px; 
+} 
+ 
+.contact-whatsapp-label { 
+  color: var(--medium-green); 
+  font-size: 25px; 
+  font-weight: 700; 
+} 
+ 
+.contact-whatsapp-icon { 
+  font-size: 25px; 
+  line-height: 1; 
+} 
+ 
+.contact-whatsapp-number { 
+  color: var(--dark-gray); 
+  font-size: 25px; 
+  font-weight: 700; 
+  text-decoration: none; 
+} 
+ 
+.contact-whatsapp-separator { 
+  color: var(--dark-gray); 
+  font-size: 25px; 
+  font-weight: 700; 
+} 
+ 
+ 
+/* WORKING HOURS */ 
+ 
+.contact-page-working { 
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 7px; 
+  margin: 10px 0 24px; 
+  font-size: 25px; 
+} 
+ 
+.contact-working-label { 
+  color: #ff0000; 
+  font-size: 25px; 
+  font-weight: 700; 
+} 
+ 
+.contact-working-icon { 
+  font-size: 25px; 
+  line-height: 1; 
+} 
+ 
+.contact-working-days { 
+  color: #000000; 
+  font-size: 25px; 
+  font-weight: 400; 
+} 
+ 
+.contact-working-separator { 
+  color: var(--dark-gray); 
+  font-size: 25px; 
+  font-weight: 700; 
+} 
+ 
+.contact-working-hours { 
+  color: var(--dark-gray); 
+  font-size: 25px; 
+  font-weight: 700; 
+} 
+ 
+ 
+/* REQUEST A QUOTE */ 
+ 
+.contact-form-title { 
+  margin-top: 26px; 
+  margin-bottom: 18px; 
+  font-size: 20px; 
+  font-weight: 700; 
+} 
+ 
+ 
+/* FORM */ 
+ 
+.contact-form { 
+  width: 100%; 
+  max-width: 700px; 
+} 
+ 
+.contact-form label { 
+  display: block; 
+  margin-bottom: 16px; 
+  color: #000000; 
+  font-size: 16px; 
+  font-weight: 700; 
+} 
+ 
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea { 
+  display: block; 
+  width: 100%; 
+  margin-top: 6px; 
+  padding: 10px 12px; 
+  border: 1px solid #d1d5db; 
+  border-radius: 6px; 
+  background: #ffffff; 
+  color: #111827; 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 16px; 
+} 
+ 
+.contact-form select { 
+  border-color: var(--orange); 
+  background: #f97316; 
+  color: #ffffff; 
+  font-weight: 700; 
+} 
+ 
+.contact-form input:focus, 
+.contact-form select:focus, 
+.contact-form textarea:focus { 
+  outline: 2px solid rgba(249, 115, 22, 0.25); 
+  border-color: var(--orange); 
+} 
+ 
+.contact-form textarea { 
+  resize: vertical; 
+} 
+ 
+.contact-form button { 
+  border: none; 
+  border-radius: 6px; 
+  padding: 10px 20px; 
+  background: #f97316; 
+  color: #ffffff; 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 16px; 
+  font-weight: 700; 
+  cursor: pointer; 
+} 
+ 
+.contact-form button:hover { 
+  background: #ea580c; 
+} 
+ 
+ 
+/* ===================================================== 
+   SERVICES / ABOUT CARDS 
+   ===================================================== */ 
+ 
+.preview-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 22px; 
+} 
+ 
+.preview-grid > .sr-only { 
+  grid-column: 1 / -1; 
+} 
+ 
+.card { 
+  background: var(--card-bg); 
+  border: 1px solid #e5e7eb; 
+  border-radius: 10px; 
+  overflow: hidden; 
+} 
+ 
+.card-media { 
+  width: 100%; 
+  aspect-ratio: 16 / 9; 
+  overflow: hidden; 
+} 
+ 
+.card-img { 
+  width: 100%; 
+  height: 100%; 
+  display: block; 
+  object-fit: cover; 
+} 
+ 
+.card-body { 
+  padding: 18px; 
+} 
+ 
+.card-body h3 { 
+  margin: 0 0 8px; 
+  font-size: 1.08rem; 
+  line-height: 1.3; 
+} 
+ 
+.card-body p { 
+  margin: 0; 
+  color: var(--muted); 
+  font-size: 0.94rem; 
+} 
+ 
+ 
+/* ===================================================== 
+   ACCESSIBILITY 
+   ===================================================== */ 
+ 
+.sr-only { 
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px; 
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0); 
+  white-space: nowrap; 
+  border: 0; 
+} 
+ 
+ 
+/* ===================================================== 
+   FOOTER 
+   ===================================================== */ 
+ 
+.site-footer { 
+  background: var(--header-bg); 
+  color: #ffffff; 
+  margin-top: 20px; 
+} 
+ 
+.footer-inner { 
+  padding-top: 28px; 
+  padding-bottom: 24px; 
+} 
+ 
+.footer-block > strong { 
+  display: block; 
+  margin-bottom: 14px; 
+  font-size: 1.05rem; 
+} 
+ 
+.contact-line, 
+.whatsapp-contact, 
+.working-line { 
+  margin: 8px 0; 
+} 
+ 
+.footer-contact { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+} 
+ 
+.footer-contact a { 
+  color: #ffffff; 
+  text-decoration: none; 
+} 
+ 
+.footer-whatsapp { 
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+} 
+ 
+.whatsapp-label { 
+  font-weight: 700; 
+} 
+ 
+.whatsapp-phone { 
+  font-size: 18px; 
+  line-height: 1; 
+  color: var(--bright-green); 
+} 
+ 
+.whatsapp-number { 
+  color: #ffffff; 
+  text-decoration: none; 
+} 
+ 
+.working-line { 
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 7px; 
+} 
+ 
+.working-label { 
+  font-weight: 700; 
+} 
+ 
+.footer-bottom { 
+  border-top: 1px solid rgba(255, 255, 255, 0.12); 
+  padding-top: 14px; 
+  padding-bottom: 14px; 
+} 
+ 
+.footer-bottom p { 
+  margin: 0; 
+  color: #cbd5e1; 
+  font-size: 0.9rem; 
+} 
+ 
+ 
+/* ===================================================== 
+   TABLET 
+   ===================================================== */ 
+ 
+@media (max-width: 1200px) { 
+ 
+  .hero { 
+    flex-wrap: nowrap; 
+  } 
+ 
+  .hero-welcome { 
+    width: 2.17in; 
+    flex-basis: 2.17in; 
+  } 
+ 
+  .hero-media { 
+    width: 2.08in; 
+    height: 2.40in; 
+    flex-basis: 2.08in; 
+  } 
+ 
+  .academic-writing-box { 
+    width: 3.47in; 
+    height: 1.45in; 
+    flex-basis: 3.47in; 
+  } 
+ 
+  .academic-writing-heading { 
+    font-size: 40px; 
+  } 
+ 
+  .academic-writing-description { 
+    font-size: 25px; 
+  } 
+ 
+  .preview-grid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  } 
+} 
+ 
+ 
+/* ===================================================== 
+   MOBILE 
+   ===================================================== */ 
+ 
+@media (max-width: 900px) { 
+ 
+  .hero { 
+    flex-direction: column; 
+    align-items: center; 
+  } 
+ 
+  .hero-welcome, 
+  .hero-media, 
+  .academic-writing-box { 
+    margin-left: 0; 
+    margin-right: 0; 
+  } 
+ 
+  .hero-media { 
+    margin-top: 12pt; 
+  } 
+ 
+  .academic-writing-box { 
+    margin-top: 12pt; 
+  } 
+ 
+  .hero-welcome { 
+    flex: 0 0 auto; 
+  } 
+ 
+  .hero-media { 
+    flex: 0 0 auto; 
+  } 
+ 
+  .academic-writing-box { 
+    flex: 0 0 auto; 
+  } 
+} 
+ 
+ 
+@media (max-width: 600px) { 
+ 
+  .container { 
+    width: min(100% - 24px, var(--max-width)); 
+  } 
+ 
+  .header-top { 
+    min-height: 105px; 
+  } 
+ 
+  .logo-img { 
+    width: 96px; 
+    height: 97px; 
+  } 
+ 
+  .site-title { 
+    font-size: 1.15rem; 
+  } 
+ 
+  .site-nav { 
+    gap: 18px; 
+    flex-wrap: wrap; 
+    min-height: 48px; 
+  } 
+ 
+  .site-nav a { 
+    font-size: 0.9rem; 
+  } 
+ 
+  main.container { 
+    padding-top: 24px; 
+    padding-bottom: 32px; 
+  } 
+ 
+  .hero { 
+    gap: 0; 
+    margin-bottom: 32px; 
+  } 
+ 
+  .hero-welcome-line { 
+    font-size: 35px; 
+  } 
+ 
+  .academic-writing-heading { 
+    font-size: 40px; 
+  } 
+ 
+  .academic-writing-description { 
+    font-size: 25px; 
+  } 
+ 
+  .preview-grid { 
+    grid-template-columns: 1fr; 
+  } 
+ 
+  .footer-whatsapp, 
+  .working-line { 
+    align-items: flex-start; 
+  } 
+ 
+  .contact-page-email, 
+  .contact-page-whatsapp, 
+  .contact-page-working { 
+    font-size: 25px; 
+  } 
+ 
+  .contact-form { 
+    max-width: 100%; 
+  } 
 }
