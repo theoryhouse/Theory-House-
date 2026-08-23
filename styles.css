@@ -100,7 +100,7 @@ a {
 .header-phone {
   font-size: 25px;
   line-height: 1;
-  color: #92d050;
+  color: #00ff00;
 }
 
 .header-separator {
@@ -116,7 +116,8 @@ a {
 }
 
 .email-icon {
-  color: #ffff00;
+  color: #ffff00 !important;
+  fill: #ffff00 !important;
 }
 
 .site-nav {
@@ -169,7 +170,8 @@ main.container {
 
 /* =====================================================
    WELCOME BOX
-   2.17" WIDTH × 1.33" HEIGHT
+   WIDTH = 2.17"
+   HEIGHT = 1.33"
    ===================================================== */
 
 .hero-welcome {
@@ -196,7 +198,7 @@ main.container {
   padding: 0;
 
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 700;
 
   line-height: 1;
@@ -230,14 +232,15 @@ main.container {
 
 /* =====================================================
    VIDEO BOX
-   1.23" WIDTH × 2" HEIGHT
+   WIDTH = 1.50"
+   HEIGHT = 2.10"
    ===================================================== */
 
 .hero-media {
-  width: 1.23in;
-  min-width: 1.23in;
-  height: 2in;
-  min-height: 2in;
+  width: 1.5in;
+  min-width: 1.5in;
+  height: 2.10in;
+  min-height: 2.10in;
 
   margin-top: 12pt;
   margin-bottom: 12pt;
@@ -265,7 +268,8 @@ main.container {
 
 /* =====================================================
    ACADEMIC WRITING DATA BOX
-   3.47" WIDTH × 1.45" HEIGHT
+   WIDTH = 3.47"
+   HEIGHT = 1.45"
    ===================================================== */
 
 .hero-academic {
@@ -293,7 +297,7 @@ main.container {
 
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 700;
 
   line-height: 1;
@@ -305,7 +309,7 @@ main.container {
 
   color: #f97316;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 400;
 
   line-height: 1;
@@ -672,7 +676,8 @@ main.container {
 }
 
 .footer-contact .email-icon {
-  color: #ffff00;
+  color: #ffff00 !important;
+  fill: #ffff00 !important;
 }
 
 .footer-contact a {
@@ -692,7 +697,7 @@ main.container {
 }
 
 .whatsapp-phone {
-  color: #92d050;
+  color: #00ff00 !important;
   font-size: 18px;
   line-height: 1;
 }
@@ -737,11 +742,11 @@ main.container {
   }
 
   .hero-academic-heading {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .hero-academic-description {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   .preview-grid {
@@ -789,7 +794,8 @@ main.container {
   }
 
 
-  /* Keep the three hero boxes together on mobile */
+  /* Keep the three hero boxes together */
+
   .hero {
     display: flex;
     flex-direction: row;
@@ -808,14 +814,14 @@ main.container {
   }
 
   .hero-welcome-line {
-    font-size: 20px;
+    font-size: 35px;
   }
 
   .hero-media {
-    width: 1.23in;
-    min-width: 1.23in;
-    height: 2in;
-    min-height: 2in;
+    width: 1.5in;
+    min-width: 1.5in;
+    height: 2.10in;
+    min-height: 2.10in;
   }
 
   .hero-video {
@@ -831,11 +837,11 @@ main.container {
   }
 
   .hero-academic-heading {
-    font-size: 24px;
+    font-size: 40px;
   }
 
   .hero-academic-description {
-    font-size: 13px;
+    font-size: 30px;
   }
 
   .preview-grid {
