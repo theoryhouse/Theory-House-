@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-
 :root {
   --accent: #0b76ff;
   --bg: #ffffff;
@@ -51,7 +49,7 @@ a {
 }
 
 .header-top {
-  min-height: 90px;
+  min-height: 82px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,10 +63,9 @@ a {
   text-decoration: none;
 }
 
-/* BIG LOGO */
 .logo-img {
-  width: 80px;
-  height: 80px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   display: block;
 }
@@ -135,72 +132,58 @@ main.container {
 
 
 /* =====================================================
-   HERO SECTION LAYOUT
+   HERO
    ===================================================== */
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 190px minmax(0, 1fr);
+  grid-template-columns: 456px minmax(0, 1fr);
   align-items: center;
-  gap: 24px;
+  gap: 34px;
   margin-bottom: 42px;
 }
 
 
 /* =====================================================
-   JOINING WRITING TEXT (LEFT SIDE)
-   ===================================================== */
-
-.hero-cursive-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Dancing Script', cursive;
-  font-weight: 700;
-  line-height: 1.05;
-}
-
-.line-green {
-  color: #15803d; /* Vibrant Green */
-  font-size: clamp(2rem, 3.2vw, 2.7rem);
-  margin-bottom: 0;
-}
-
-.line-orange {
-  color: #ea580c; /* Vibrant Orange */
-  font-size: clamp(2rem, 3.2vw, 2.7rem);
-  margin-top: 0;
-}
-
-
-/* =====================================================
-   HERO VIDEO (NO EXCESS BLACK BORDERS)
+   HERO VIDEO
+   EXACT SIZE:
+   WIDTH  = 4.75 inches ≈ 456px
+   HEIGHT = 2.32 inches ≈ 223px
    ===================================================== */
 
 .hero-media {
-  width: 190px;
-  height: 338px;
+  width: 456px;
+  height: 223px;
   overflow: hidden;
-  border-radius: 12px;
-  background: transparent;
+  border-radius: 10px;
+  background: #000000;
 }
 
 .hero-video {
-  width: 100%;
-  height: 100%;
+  width: 456px;
+  height: 223px;
   display: block;
-  object-fit: cover; /* Fills vertical box with zero side borders */
+
+  /* SHOW THE COMPLETE VIDEO */
+  object-fit: contain;
+
+  background: #000000;
 }
 
 
 /* =====================================================
-   HERO TEXT & CTA (RIGHT SIDE)
+   HERO TEXT
    ===================================================== */
+
+.hero-text h1 {
+  margin: 0 0 14px;
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+  line-height: 1.15;
+}
 
 .hero-text p {
   margin: 0 0 18px;
   color: var(--muted);
-  font-size: 1.05rem;
 }
 
 .cta {
@@ -373,18 +356,24 @@ main.container {
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 20px;
-    text-align: center;
-    justify-items: center;
-  }
-
-  .hero-cursive-text {
-    align-items: center;
+    gap: 24px;
   }
 
   .hero-media {
-    width: 190px;
-    height: 338px;
+    width: 456px;
+    max-width: 100%;
+    height: 223px;
+    margin-inline: auto;
+  }
+
+  .hero-video {
+    width: 456px;
+    max-width: 100%;
+    height: 223px;
+  }
+
+  .hero-text {
+    text-align: center;
   }
 
   .preview-grid {
@@ -408,8 +397,8 @@ main.container {
   }
 
   .logo-img {
-    width: 60px;
-    height: 60px;
+    width: 46px;
+    height: 46px;
   }
 
   .site-title {
@@ -435,8 +424,18 @@ main.container {
     margin-bottom: 32px;
   }
 
-  .line-green, .line-orange {
-    font-size: 2rem;
+  .hero-media {
+    width: 100%;
+    height: 223px;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 223px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
   }
 
   .preview-grid {
