@@ -163,7 +163,10 @@ main.container {
   width: 456px;
   height: 223px;
   display: block;
-  object-fit: cover;
+
+  /* SHOW THE COMPLETE VIDEO */
+  object-fit: contain;
+
   background: #000000;
 }
 
