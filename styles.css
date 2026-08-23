@@ -74,6 +74,9 @@ a {
   text-decoration: none;
 }
 
+
+/* LOGO */
+
 .logo-img {
   width: 96px;
   height: 97px;
@@ -87,9 +90,13 @@ a {
   letter-spacing: 0.2px;
 }
 
+
+/* HEADER CONTACT ICONS */
+
 .header-contacts {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .contact-icon {
@@ -106,8 +113,17 @@ a {
 }
 
 .email-icon {
-  color: #ffffff;
+  color: #ffff00;
+  fill: currentColor;
 }
+
+.header-phone-icon {
+  color: #00a000;
+  fill: currentColor;
+}
+
+
+/* NAVIGATION */
 
 .site-nav {
   min-height: 52px;
@@ -146,71 +162,58 @@ main.container {
    ===================================================== */
 
 .hero {
+  width: 100%;
   display: grid;
-
-  /*
-    Three separate areas:
-    1. Welcome text
-    2. Video
-    3. Academic writing text
-
-    The welcome column has a minimum width so that
-    the video can NEVER overlap the welcome text.
-  */
-
-  grid-template-columns:
-    minmax(300px, 1fr)
-    115px
-    minmax(300px, 1.45fr);
-
+  grid-template-columns: 2.17in 115px minmax(0, 1fr);
+  column-gap: 1cm;
   align-items: center;
-
-  /*
-    Approximately 1 cm gap between:
-    Welcome → Video
-    Video → Academic Writing
-  */
-
-  column-gap: 38px;
-
   margin-bottom: 42px;
 }
 
 
 /* =====================================================
    WELCOME TEXT
+   2.17" WIDTH × 1.33" HEIGHT
    ===================================================== */
 
 .hero-welcome {
-  width: 100%;
-  min-width: 300px;
-  height: 221px;
+  width: 2.17in;
+  height: 1.33in;
+  min-width: 2.17in;
+  min-height: 1.33in;
+  max-width: 2.17in;
+  max-height: 1.33in;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 
-  overflow: visible;
+  overflow: hidden;
 }
+
+
+/* EACH LINE */
 
 .hero-welcome-line {
   margin: 0;
   padding: 0;
-
-  line-height: 1.15;
-
-  font-family:
-    "Segoe Script",
-    "Brush Script MT",
-    cursive;
-
-  font-size: clamp(1.7rem, 3vw, 2.7rem);
-
+  line-height: 1;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+  font-size: 25px;
   font-weight: 700;
-
   white-space: nowrap;
 }
+
+
+/* Remove any spacing between the two lines of each phrase */
+
+.hero-welcome-line + .hero-welcome-line {
+  margin-top: 0;
+}
+
+
+/* FIRST AND SECOND PHRASE COLORS */
 
 .hero-welcome-green {
   color: #16a34a;
@@ -222,33 +225,23 @@ main.container {
 
 
 /* =====================================================
-   VIDEO
+   HERO VIDEO
    ===================================================== */
 
 .hero-media {
   width: 115px;
-  height: 221px;
-
-  flex: 0 0 115px;
-
+  height: 1.33in;
+  flex: none;
   overflow: hidden;
-
   border-radius: 8px;
-
   background: #000000;
-
-  position: relative;
-  z-index: 2;
 }
 
 .hero-video {
   width: 115px;
-  height: 221px;
-
+  height: 1.33in;
   display: block;
-
   object-fit: cover;
-
   background: #000000;
 }
 
@@ -257,43 +250,31 @@ main.container {
    ACADEMIC WRITING & RESEARCH SUPPORT
    ===================================================== */
 
-.hero-academic {
-  width: 100%;
+.hero-support {
   min-width: 0;
+  width: 100%;
 }
 
-.hero-academic-title {
-  margin: 0 0 12px;
+.hero-support-title {
+  margin: 0 0 8px;
+  padding: 0;
 
   color: #000000;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 34px;
-
   font-weight: 700;
-
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
-.hero-academic-text {
+.hero-support-text {
   margin: 0;
+  padding: 0;
 
   color: #c65911;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-
   font-weight: 400;
-
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 
@@ -305,17 +286,10 @@ main.container {
   margin-top: 24px;
   margin-bottom: 14px;
 
-  font-family:
-    "Lucida Handwriting",
-    "Brush Script MT",
-    cursive;
-
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
   font-size: 40px;
-
   font-weight: 700;
-
   color: #ff0000;
-
   line-height: 1.2;
 }
 
@@ -323,17 +297,10 @@ main.container {
   margin-top: 24px;
   margin-bottom: 14px;
 
-  font-family:
-    "Lucida Handwriting",
-    "Brush Script MT",
-    cursive;
-
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
   font-size: 40px;
-
   font-weight: 700;
-
   color: #ff0000;
-
   line-height: 1.2;
 }
 
@@ -357,18 +324,10 @@ main.container {
   margin-top: 0;
   margin-bottom: 24px;
 
-  font-family:
-    "Arial Black",
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
   font-size: 40px;
-
   font-weight: 900;
-
   color: var(--blue-gray);
-
   line-height: 1.2;
 }
 
@@ -379,21 +338,12 @@ main.container {
 
 .contact-title {
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
-  font-family:
-    Algerian,
-    "Arial Black",
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Algerian, "Arial Black", Arial, Helvetica, sans-serif;
   font-size: 40px;
-
   font-weight: 700;
-
   color: #548235;
-
   line-height: 1.2;
 }
 
@@ -407,8 +357,8 @@ main.container {
 .contact-page-email {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin: 12px 0;
+  gap: 7px;
+  margin: 10px 0;
 }
 
 .contact-email-icon {
@@ -431,8 +381,8 @@ main.container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 12px 0;
+  gap: 7px;
+  margin: 10px 0;
   font-size: 25px;
 }
 
@@ -445,6 +395,7 @@ main.container {
 .contact-whatsapp-icon {
   font-size: 25px;
   line-height: 1;
+  color: #00a000;
 }
 
 .contact-whatsapp-number {
@@ -467,8 +418,8 @@ main.container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 12px 0 28px;
+  gap: 7px;
+  margin: 10px 0 24px;
   font-size: 25px;
 }
 
@@ -502,9 +453,7 @@ main.container {
 }
 
 
-/* =====================================================
-   REQUEST A QUOTE
-   ===================================================== */
+/* REQUEST A QUOTE */
 
 .contact-form-title {
   margin-top: 26px;
@@ -514,9 +463,7 @@ main.container {
 }
 
 
-/* =====================================================
-   CONTACT FORM
-   ===================================================== */
+/* FORM */
 
 .contact-form {
   width: 100%;
@@ -526,11 +473,8 @@ main.container {
 .contact-form label {
   display: block;
   margin-bottom: 16px;
-
   color: #000000;
-
   font-size: 16px;
-
   font-weight: 400;
 }
 
@@ -538,39 +482,27 @@ main.container {
 .contact-form select,
 .contact-form textarea {
   display: block;
-
   width: 100%;
-
   margin-top: 6px;
-
   padding: 10px 12px;
 
   border: 1px solid #d1d5db;
-
   border-radius: 6px;
 
   background: #ffffff;
-
   color: #111827;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
+
+/* ORANGE SELECT BOX */
+
 .contact-form select {
-  background: var(--orange);
+  background-color: var(--orange);
   color: #ffffff;
   border-color: var(--orange);
-  font-weight: 700;
-}
-
-.contact-form select option {
-  background: var(--orange);
-  color: #ffffff;
   font-weight: 700;
 }
 
@@ -585,31 +517,26 @@ main.container {
   resize: vertical;
 }
 
+
+/* SEND REQUEST */
+
 .contact-form button {
   border: none;
-
   border-radius: 6px;
-
   padding: 10px 20px;
 
   background: #c65911;
-
   color: #ffffff;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-
   font-weight: 700;
 
   cursor: pointer;
 }
 
 .contact-form button:hover {
-  background: #a9470b;
+  background: #a9470d;
 }
 
 
@@ -629,28 +556,21 @@ main.container {
 
 .card {
   background: var(--card-bg);
-
   border: 1px solid #e5e7eb;
-
   border-radius: 10px;
-
   overflow: hidden;
 }
 
 .card-media {
   width: 100%;
-
   aspect-ratio: 16 / 9;
-
   overflow: hidden;
 }
 
 .card-img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
 }
 
@@ -660,17 +580,13 @@ main.container {
 
 .card-body h3 {
   margin: 0 0 8px;
-
   font-size: 1.08rem;
-
   line-height: 1.3;
 }
 
 .card-body p {
   margin: 0;
-
   color: var(--muted);
-
   font-size: 0.94rem;
 }
 
@@ -681,19 +597,13 @@ main.container {
 
 .sr-only {
   position: absolute;
-
   width: 1px;
   height: 1px;
-
   padding: 0;
   margin: -1px;
-
   overflow: hidden;
-
   clip: rect(0, 0, 0, 0);
-
   white-space: nowrap;
-
   border: 0;
 }
 
@@ -704,9 +614,7 @@ main.container {
 
 .site-footer {
   background: var(--header-bg);
-
   color: #ffffff;
-
   margin-top: 20px;
 }
 
@@ -717,9 +625,7 @@ main.container {
 
 .footer-block > strong {
   display: block;
-
   margin-bottom: 14px;
-
   font-size: 1.05rem;
 }
 
@@ -731,25 +637,30 @@ main.container {
 
 .footer-contact {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 }
 
 .footer-contact a {
   color: #ffffff;
-
   text-decoration: none;
 }
 
+
+/* FOOTER EMAIL ICON = YELLOW */
+
+.footer-contact .email-icon {
+  color: #ffff00;
+  fill: currentColor;
+}
+
+
+/* FOOTER WHATSAPP */
+
 .footer-whatsapp {
   display: flex;
-
   align-items: center;
-
   flex-wrap: wrap;
-
   gap: 8px;
 }
 
@@ -757,19 +668,21 @@ main.container {
   font-weight: 700;
 }
 
+.whatsapp-phone-icon {
+  color: #00a000;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
 .whatsapp-number {
   color: #ffffff;
-
   text-decoration: none;
 }
 
 .working-line {
   display: flex;
-
   align-items: center;
-
   flex-wrap: wrap;
-
   gap: 7px;
 }
 
@@ -778,18 +691,14 @@ main.container {
 }
 
 .footer-bottom {
-  border-top:
-    1px solid rgba(255, 255, 255, 0.12);
-
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 14px;
   padding-bottom: 14px;
 }
 
 .footer-bottom p {
   margin: 0;
-
   color: #cbd5e1;
-
   font-size: 0.9rem;
 }
 
@@ -798,59 +707,19 @@ main.container {
    TABLET
    ===================================================== */
 
-@media (max-width: 1100px) {
-
-  .hero {
-    grid-template-columns:
-      minmax(270px, 1fr)
-      115px
-      minmax(260px, 1.2fr);
-
-    column-gap: 30px;
-  }
-
-  .hero-welcome {
-    min-width: 270px;
-  }
-
-  .hero-welcome-line {
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-  }
-
-  .hero-academic-title {
-    font-size: 28px;
-  }
-
-  .hero-academic-text {
-    font-size: 16px;
-  }
-}
-
 @media (max-width: 900px) {
 
   .hero {
-    grid-template-columns:
-      minmax(240px, 1fr)
-      115px
-      minmax(230px, 1fr);
-
-    column-gap: 24px;
+    grid-template-columns: 2.17in 115px minmax(0, 1fr);
+    column-gap: 0.6cm;
   }
 
-  .hero-welcome {
-    min-width: 240px;
+  .hero-support-title {
+    font-size: 28px;
   }
 
-  .hero-welcome-line {
-    font-size: clamp(1.35rem, 3vw, 2rem);
-  }
-
-  .hero-academic-title {
-    font-size: 25px;
-  }
-
-  .hero-academic-text {
-    font-size: 15px;
+  .hero-support-text {
+    font-size: 16px;
   }
 
   .preview-grid {
@@ -884,9 +753,7 @@ main.container {
 
   .site-nav {
     gap: 18px;
-
     flex-wrap: wrap;
-
     min-height: 48px;
   }
 
@@ -900,108 +767,52 @@ main.container {
   }
 
 
-  /* ===================================================
-     HOME HERO MOBILE
-     =================================================== */
+  /* MOBILE HERO */
 
   .hero {
     display: flex;
-
     flex-direction: column;
-
     align-items: stretch;
-
-    gap: 20px;
-
+    gap: 18px;
     margin-bottom: 32px;
   }
 
   .hero-welcome {
-    width: 100%;
-
-    min-width: 0;
-
-    height: auto;
-
-    min-height: 120px;
-
-    justify-content: center;
+    width: 2.17in;
+    height: 1.33in;
+    min-width: 2.17in;
+    min-height: 1.33in;
+    max-width: 2.17in;
+    max-height: 1.33in;
   }
 
   .hero-welcome-line {
-    font-size: clamp(1.3rem, 6vw, 1.8rem);
-
-    white-space: normal;
+    font-size: 25px;
+    white-space: nowrap;
   }
 
   .hero-media {
     width: 115px;
-
-    height: 221px;
-
-    flex: 0 0 221px;
-
-    align-self: center;
+    height: 1.33in;
   }
 
   .hero-video {
     width: 115px;
-    height: 221px;
+    height: 1.33in;
   }
 
-  .hero-academic {
+  .hero-support {
     width: 100%;
   }
 
-  .hero-academic-title {
-    font-size: 28px;
+  .hero-support-title {
+    font-size: 30px;
   }
 
-  .hero-academic-text {
-    font-size: 17px;
+  .hero-support-text {
+    font-size: 18px;
   }
 
-
-  /* ABOUT */
-
-  .about-title,
-  .about-heading {
-    font-size: 32px;
-  }
-
-
-  /* SERVICES */
-
-  .services-title {
-    font-size: 32px;
-  }
-
-
-  /* CONTACT */
-
-  .contact-title {
-    font-size: 32px;
-  }
-
-  .contact-page-email,
-  .contact-page-whatsapp,
-  .contact-page-working {
-    font-size: 25px;
-  }
-
-  .contact-page-email a,
-  .contact-email-icon,
-  .contact-whatsapp-label,
-  .contact-whatsapp-icon,
-  .contact-whatsapp-number,
-  .contact-whatsapp-separator,
-  .contact-working-label,
-  .contact-working-icon,
-  .contact-working-days,
-  .contact-working-separator,
-  .contact-working-hours {
-    font-size: 25px;
-  }
 
   .preview-grid {
     grid-template-columns: 1fr;
@@ -1010,6 +821,12 @@ main.container {
   .footer-whatsapp,
   .working-line {
     align-items: flex-start;
+  }
+
+  .contact-page-email,
+  .contact-page-whatsapp,
+  .contact-page-working {
+    font-size: 25px;
   }
 
   .contact-form {
