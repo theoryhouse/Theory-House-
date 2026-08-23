@@ -12,7 +12,18 @@
   --card-bg: #f8fafc;
   --text: #0b1720;
   --max-width: 980px;
+
+  /* Bright light / parrot green for phone icons */
+  --phone-green: #39ff14;
+
+  /* Yellow for email icons */
+  --email-yellow: #ffff00;
 }
+
+
+/* =====================================================
+   BASIC RESET
+   ===================================================== */
 
 * {
   box-sizing: border-box;
@@ -69,6 +80,9 @@ a {
   text-decoration: none;
 }
 
+
+/* LOGO */
+
 .logo-img {
   width: 96px;
   height: 97px;
@@ -82,10 +96,13 @@ a {
   letter-spacing: 0.2px;
 }
 
+
+/* HEADER CONTACT ICONS */
+
 .header-contacts {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .contact-icon {
@@ -97,28 +114,26 @@ a {
   text-decoration: none;
 }
 
-.header-phone {
-  font-size: 25px;
-  line-height: 1;
-  color: #00ff00;
-}
-
-.header-separator {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
 .icon {
   display: block;
 }
 
+
+/* EMAIL = YELLOW */
+
 .email-icon {
-  color: #ffff00 !important;
-  fill: #ffff00 !important;
+  color: var(--email-yellow);
 }
+
+
+/* PHONE = BRIGHT LIGHT / PARROT GREEN */
+
+.phone-icon {
+  color: var(--phone-green);
+}
+
+
+/* NAVIGATION */
 
 .site-nav {
   min-height: 52px;
@@ -153,45 +168,54 @@ main.container {
 
 
 /* =====================================================
-   HOME HERO — THREE BOXES
+   HOME HERO
    ===================================================== */
 
 .hero {
   display: flex;
   align-items: center;
-  gap: 0.8cm;
-  width: 100%;
+
+  /*
+    Exact horizontal spacing:
+    Welcome → Video = 3 cm
+    Video → Academic = 1.5 cm
+  */
+  gap: 0;
+
   margin-top: 12pt;
   margin-bottom: 12pt;
-  padding: 0;
-  overflow: visible;
+
+  width: 100%;
 }
 
 
 /* =====================================================
    WELCOME BOX
-   WIDTH = 2.17"
-   HEIGHT = 1.33"
+   Width  = 2.17"
+   Height = 1.33"
    ===================================================== */
 
 .hero-welcome {
   width: 2.17in;
-  min-width: 2.17in;
   height: 1.33in;
-  min-height: 1.33in;
 
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-  padding: 0;
+  flex: 0 0 2.17in;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 
+  margin-top: 12pt;
+  margin-bottom: 12pt;
+
+  padding: 0;
   border: none;
   overflow: visible;
 }
+
+
+/* Welcome text */
 
 .hero-welcome-line {
   margin: 0;
@@ -205,53 +229,58 @@ main.container {
   white-space: nowrap;
 }
 
-.hero-welcome-line.welcome-first {
-  margin: 0;
-}
 
-.hero-welcome-line.welcome-second {
-  margin: 0;
-}
-
-.hero-welcome-line.welcome-third {
-  margin-top: 3pt;
-}
-
-.hero-welcome-line.welcome-fourth {
-  margin: 0;
-}
+/* First two lines */
 
 .hero-welcome-green {
   color: #16a34a;
 }
 
+
+/* Second two lines */
+
 .hero-welcome-orange {
   color: var(--orange);
+
+  /*
+    3 pt before spacing requested
+  */
+  margin-top: 3pt;
 }
 
 
 /* =====================================================
    VIDEO BOX
-   WIDTH = 1.50"
-   HEIGHT = 2.10"
+   Width  = 2.05"
+   Height = 2.20"
    ===================================================== */
 
 .hero-media {
-  width: 1.5in;
-  min-width: 1.5in;
-  height: 2.10in;
-  min-height: 2.10in;
+  width: 2.05in;
+  height: 2.20in;
+
+  flex: 0 0 2.05in;
+
+  /*
+    3 cm = approximately 113.39px
+    1.5 cm = approximately 56.69px
+  */
+  margin-left: 3cm;
+  margin-right: 1.5cm;
 
   margin-top: 12pt;
   margin-bottom: 12pt;
-  padding: 0;
 
   overflow: hidden;
+
   border: none;
-  border-radius: 0;
+  border-radius: 8px;
 
   background: #000000;
 }
+
+
+/* Video itself */
 
 .hero-video {
   width: 100%;
@@ -260,29 +289,39 @@ main.container {
   display: block;
 
   object-fit: cover;
-  object-position: center;
+
+  border: none;
 
   background: #000000;
 }
 
 
+/* Academic text */
+
+.hero-text {
+  display: none;
+}
+
+
 /* =====================================================
    ACADEMIC WRITING DATA BOX
-   WIDTH = 3.47"
-   HEIGHT = 1.45"
+   Width  = 3.47"
+   Height = 1.45"
    ===================================================== */
 
 .hero-academic {
   width: 3.47in;
-  min-width: 3.47in;
   height: 1.45in;
-  min-height: 1.45in;
+
+  flex: 0 0 3.47in;
 
   margin-top: 12pt;
   margin-bottom: 12pt;
+
   padding: 0;
 
   border: none;
+
   overflow: visible;
 
   display: flex;
@@ -291,28 +330,44 @@ main.container {
   align-items: flex-start;
 }
 
+
+/* =====================================================
+   ACADEMIC HEADING
+   ===================================================== */
+
 .hero-academic-heading {
   margin: 0;
   padding: 0;
 
   color: #000000;
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 700;
 
   line-height: 1;
+
+  white-space: nowrap;
 }
 
-.hero-academic-description {
+
+/* =====================================================
+   ACADEMIC DESCRIPTION
+   ===================================================== */
+
+.hero-academic-text {
   margin: 4pt 0 0 0;
   padding: 0;
 
-  color: #f97316;
+  color: var(--orange);
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: 400;
 
   line-height: 1;
+
+  white-space: nowrap;
 }
 
 
@@ -329,6 +384,7 @@ main.container {
   font-weight: 700;
 
   color: #ff0000;
+
   line-height: 1.2;
 }
 
@@ -341,6 +397,7 @@ main.container {
   font-weight: 700;
 
   color: #ff0000;
+
   line-height: 1.2;
 }
 
@@ -369,6 +426,7 @@ main.container {
   font-weight: 900;
 
   color: var(--blue-gray);
+
   line-height: 1.2;
 }
 
@@ -386,6 +444,7 @@ main.container {
   font-weight: 700;
 
   color: #548235;
+
   line-height: 1.2;
 }
 
@@ -394,7 +453,7 @@ main.container {
 }
 
 
-/* EMAIL */
+/* EMAIL CONTACT */
 
 .contact-page-email {
   display: flex;
@@ -417,7 +476,7 @@ main.container {
 }
 
 
-/* WHATSAPP */
+/* WHATSAPP CONTACT */
 
 .contact-page-whatsapp {
   display: flex;
@@ -499,6 +558,7 @@ main.container {
 .contact-form-title {
   margin-top: 26px;
   margin-bottom: 18px;
+
   font-size: 20px;
   font-weight: 700;
 }
@@ -514,17 +574,22 @@ main.container {
 .contact-form label {
   display: block;
   margin-bottom: 16px;
+
   color: #000000;
+
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
   display: block;
+
   width: 100%;
+
   margin-top: 6px;
+
   padding: 10px 12px;
 
   border: 1px solid #d1d5db;
@@ -537,9 +602,13 @@ main.container {
   font-size: 16px;
 }
 
+
+/* ORANGE SELECT BOX */
+
 .contact-form select {
-  color: var(--orange);
-  border-color: var(--orange);
+  background: var(--orange);
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .contact-form input:focus,
@@ -553,6 +622,9 @@ main.container {
   resize: vertical;
 }
 
+
+/* SEND REQUEST */
+
 .contact-form button {
   border: none;
   border-radius: 6px;
@@ -560,7 +632,8 @@ main.container {
   padding: 10px 20px;
 
   background: var(--light-orange);
-  color: #c55a11;
+
+  color: #c2410c;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -633,11 +706,16 @@ main.container {
   position: absolute;
   width: 1px;
   height: 1px;
+
   padding: 0;
   margin: -1px;
+
   overflow: hidden;
+
   clip: rect(0, 0, 0, 0);
+
   white-space: nowrap;
+
   border: 0;
 }
 
@@ -669,6 +747,9 @@ main.container {
   margin: 8px 0;
 }
 
+
+/* FOOTER EMAIL */
+
 .footer-contact {
   display: flex;
   align-items: center;
@@ -676,14 +757,16 @@ main.container {
 }
 
 .footer-contact .email-icon {
-  color: #ffff00 !important;
-  fill: #ffff00 !important;
+  color: var(--email-yellow);
 }
 
 .footer-contact a {
   color: #ffffff;
   text-decoration: none;
 }
+
+
+/* FOOTER WHATSAPP */
 
 .footer-whatsapp {
   display: flex;
@@ -696,16 +779,21 @@ main.container {
   font-weight: 700;
 }
 
-.whatsapp-phone {
-  color: #00ff00 !important;
-  font-size: 18px;
-  line-height: 1;
+
+/* FOOTER PHONE ICON */
+
+.footer-whatsapp .phone-icon {
+  color: var(--phone-green);
 }
+
 
 .whatsapp-number {
   color: #ffffff;
   text-decoration: none;
 }
+
+
+/* WORKING */
 
 .working-line {
   display: flex;
@@ -720,6 +808,7 @@ main.container {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+
   padding-top: 14px;
   padding-bottom: 14px;
 }
@@ -735,22 +824,22 @@ main.container {
    TABLET
    ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
   .hero {
-    gap: 0.8cm;
+    transform-origin: left center;
   }
 
-  .hero-academic-heading {
+  .hero-welcome-line {
     font-size: 32px;
   }
 
-  .hero-academic-description {
-    font-size: 22px;
+  .hero-academic-heading {
+    font-size: 36px;
   }
 
-  .preview-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .hero-academic-text {
+    font-size: 26px;
   }
 }
 
@@ -758,6 +847,34 @@ main.container {
 /* =====================================================
    MOBILE
    ===================================================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12pt;
+  }
+
+  .hero-welcome {
+    margin-left: 0;
+  }
+
+  .hero-media {
+    margin-left: 3cm;
+    margin-right: 1.5cm;
+  }
+
+  .hero-academic {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 
 @media (max-width: 600px) {
 
@@ -778,6 +895,10 @@ main.container {
     font-size: 1.15rem;
   }
 
+  .header-contacts {
+    gap: 8px;
+  }
+
   .site-nav {
     gap: 18px;
     flex-wrap: wrap;
@@ -793,24 +914,18 @@ main.container {
     padding-bottom: 32px;
   }
 
-
-  /* Keep the three hero boxes together */
-
   .hero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 0.8cm;
-    width: max-content;
-    max-width: none;
-    overflow: visible;
+    gap: 0;
   }
 
   .hero-welcome {
     width: 2.17in;
-    min-width: 2.17in;
     height: 1.33in;
-    min-height: 1.33in;
+    flex: 0 0 1.33in;
+    margin: 12pt 0;
   }
 
   .hero-welcome-line {
@@ -818,29 +933,31 @@ main.container {
   }
 
   .hero-media {
-    width: 1.5in;
-    min-width: 1.5in;
-    height: 2.10in;
-    min-height: 2.10in;
-  }
+    width: 2.05in;
+    height: 2.20in;
+    flex: 0 0 2.20in;
 
-  .hero-video {
-    width: 100%;
-    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    margin-top: 3cm;
+    margin-bottom: 1.5cm;
   }
 
   .hero-academic {
     width: 3.47in;
-    min-width: 3.47in;
+    max-width: 100%;
     height: 1.45in;
-    min-height: 1.45in;
+    flex: 0 0 1.45in;
+
+    margin: 12pt 0;
   }
 
   .hero-academic-heading {
     font-size: 40px;
   }
 
-  .hero-academic-description {
+  .hero-academic-text {
     font-size: 30px;
   }
 
