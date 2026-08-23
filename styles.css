@@ -1,7 +1,11 @@
 :root {
   --accent: #0b76ff;
-  --green: #16a34a;
+  --green: #548235;
   --orange: #f97316;
+  --medium-green: #70ad47;
+  --blue-gray: #5b6573;
+  --dark-gray: #404040;
+  --light-orange: #fce4d6;
   --bg: #ffffff;
   --muted: #6b7280;
   --header-bg: #0f1720;
@@ -9,6 +13,11 @@
   --text: #0b1720;
   --max-width: 980px;
 }
+
+
+/* =====================================================
+   BASIC RESET
+   ===================================================== */
 
 * {
   box-sizing: border-box;
@@ -22,7 +31,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
@@ -65,10 +74,12 @@ a {
   text-decoration: none;
 }
 
-/* LOGO:
+
+/* LOGO
    Width  = 1.00" ≈ 96px
    Height = 1.01" ≈ 97px
 */
+
 .logo-img {
   width: 96px;
   height: 97px;
@@ -98,7 +109,6 @@ a {
 
 .icon {
   display: block;
-  fill: currentColor;
 }
 
 .email-icon {
@@ -138,7 +148,7 @@ main.container {
 
 
 /* =====================================================
-   HERO
+   HOME HERO
    ===================================================== */
 
 .hero {
@@ -147,12 +157,6 @@ main.container {
   gap: 24px;
   margin-bottom: 42px;
 }
-
-
-/* =====================================================
-   WELCOME TEXT
-   Height = 2.30" ≈ 221px
-   ===================================================== */
 
 .hero-welcome {
   width: auto;
@@ -176,19 +180,12 @@ main.container {
 }
 
 .hero-welcome-green {
-  color: var(--green);
+  color: #16a34a;
 }
 
 .hero-welcome-orange {
   color: var(--orange);
 }
-
-
-/* =====================================================
-   VIDEO BOX
-   Width  = 1.20" ≈ 115px
-   Height = 2.30" ≈ 221px
-   ===================================================== */
 
 .hero-media {
   width: 115px;
@@ -207,18 +204,254 @@ main.container {
   background: #000000;
 }
 
-
-/* =====================================================
-   OLD HERO TEXT — HIDDEN
-   ===================================================== */
-
 .hero-text {
   display: none;
 }
 
 
 /* =====================================================
-   SERVICES PREVIEW
+   ABOUT PAGE
+   ===================================================== */
+
+/* About Us */
+.about-title {
+  margin-top: 24px;
+  margin-bottom: 14px;
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff0000;
+  line-height: 1.2;
+}
+
+/* Our Approach */
+.about-heading {
+  margin-top: 24px;
+  margin-bottom: 14px;
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff0000;
+  line-height: 1.2;
+}
+
+.about-hero {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.about-hero-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   SERVICES PAGE
+   ===================================================== */
+
+.services-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--blue-gray);
+  line-height: 1.2;
+}
+
+
+/* =====================================================
+   CONTACT PAGE
+   ===================================================== */
+
+/* Contact Us */
+.contact-title {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-family: Algerian, "Arial Black", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #548235;
+  line-height: 1.2;
+}
+
+/* Contact introductory text */
+.contact-intro {
+  margin: 0 0 18px;
+}
+
+
+/* EMAIL CONTACT */
+
+.contact-page-email {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 10px 0;
+}
+
+.contact-email-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.contact-page-email a {
+  color: #0000ff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+/* WHATSAPP CONTACT */
+
+.contact-page-whatsapp {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.contact-whatsapp-label {
+  color: var(--medium-green);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contact-whatsapp-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.contact-whatsapp-number {
+  color: var(--dark-gray);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-whatsapp-separator {
+  color: var(--dark-gray);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* WORKING HOURS */
+
+.contact-page-working {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0 24px;
+  font-size: 18px;
+}
+
+.contact-working-label {
+  color: #ff0000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contact-working-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.contact-working-days {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-working-separator {
+  color: var(--dark-gray);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contact-working-hours {
+  color: var(--dark-gray);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* REQUEST A QUOTE */
+
+.contact-form-title {
+  margin-top: 26px;
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* FORM */
+
+.contact-form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--light-orange);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(249, 115, 22, 0.25);
+  border-color: var(--orange);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  background: var(--light-orange);
+  color: #f97316;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #f8d3bd;
+}
+
+
+/* =====================================================
+   SERVICES / ABOUT CARDS
    ===================================================== */
 
 .preview-grid {
@@ -457,5 +690,15 @@ main.container {
   .footer-whatsapp,
   .working-line {
     align-items: flex-start;
+  }
+
+  .contact-page-email,
+  .contact-page-whatsapp,
+  .contact-page-working {
+    font-size: 18px;
+  }
+
+  .contact-form {
+    max-width: 100%;
   }
 }
