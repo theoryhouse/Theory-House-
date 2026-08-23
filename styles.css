@@ -75,10 +75,7 @@ a {
 }
 
 
-/* LOGO
-   Width  = 1.00" ≈ 96px
-   Height = 1.01" ≈ 97px
-*/
+/* LOGO */
 
 .logo-img {
   width: 96px;
@@ -152,20 +149,20 @@ main.container {
    ===================================================== */
 
 .hero {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 115px minmax(0, 1.45fr);
   align-items: center;
-  gap: 24px;
+  gap: 38px;
   margin-bottom: 42px;
 }
 
 .hero-welcome {
-  width: auto;
+  width: 100%;
   height: 221px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex: 1 1 auto;
   min-width: 0;
 }
 
@@ -187,6 +184,9 @@ main.container {
   color: var(--orange);
 }
 
+
+/* VIDEO */
+
 .hero-media {
   width: 115px;
   height: 221px;
@@ -204,8 +204,29 @@ main.container {
   background: #000000;
 }
 
-.hero-text {
-  display: none;
+
+/* HOME ACADEMIC WRITING TEXT */
+
+.hero-academic {
+  min-width: 0;
+}
+
+.hero-academic-title {
+  margin: 0 0 12px;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-academic-text {
+  margin: 0;
+  color: #c65911;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 
@@ -213,23 +234,21 @@ main.container {
    ABOUT PAGE
    ===================================================== */
 
-/* About Us */
 .about-title {
   margin-top: 24px;
   margin-bottom: 14px;
   font-family: "Lucida Handwriting", "Brush Script MT", cursive;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
   color: #ff0000;
   line-height: 1.2;
 }
 
-/* Our Approach */
 .about-heading {
   margin-top: 24px;
   margin-bottom: 14px;
   font-family: "Lucida Handwriting", "Brush Script MT", cursive;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
   color: #ff0000;
   line-height: 1.2;
@@ -255,7 +274,7 @@ main.container {
   margin-top: 0;
   margin-bottom: 24px;
   font-family: "Arial Black", Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 900;
   color: var(--blue-gray);
   line-height: 1.2;
@@ -266,123 +285,131 @@ main.container {
    CONTACT PAGE
    ===================================================== */
 
-/* Contact Us */
 .contact-title {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   font-family: Algerian, "Arial Black", Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
   color: #548235;
   line-height: 1.2;
 }
 
-/* Contact introductory text */
 .contact-intro {
   margin: 0 0 18px;
 }
 
 
-/* EMAIL CONTACT */
+/* =====================================================
+   CONTACT EMAIL
+   ===================================================== */
 
 .contact-page-email {
   display: flex;
   align-items: center;
-  gap: 7px;
-  margin: 10px 0;
+  gap: 8px;
+  margin: 12px 0;
 }
 
 .contact-email-icon {
-  font-size: 18px;
+  font-size: 25px;
   line-height: 1;
+  color: #ff69b4;
+  filter: saturate(1.2);
 }
 
 .contact-page-email a {
   color: #0000ff;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
   text-decoration: none;
 }
 
 
-/* WHATSAPP CONTACT */
+/* =====================================================
+   CONTACT WHATSAPP
+   ===================================================== */
 
 .contact-page-whatsapp {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 7px;
-  margin: 10px 0;
-  font-size: 18px;
+  gap: 8px;
+  margin: 12px 0;
+  font-size: 25px;
 }
 
 .contact-whatsapp-label {
   color: var(--medium-green);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 .contact-whatsapp-icon {
-  font-size: 18px;
+  font-size: 25px;
   line-height: 1;
 }
 
 .contact-whatsapp-number {
   color: var(--dark-gray);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
   text-decoration: none;
 }
 
 .contact-whatsapp-separator {
   color: var(--dark-gray);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 
-/* WORKING HOURS */
+/* =====================================================
+   WORKING HOURS
+   ===================================================== */
 
 .contact-page-working {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 7px;
-  margin: 10px 0 24px;
-  font-size: 18px;
+  gap: 8px;
+  margin: 12px 0 28px;
+  font-size: 25px;
 }
 
 .contact-working-label {
   color: #ff0000;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 .contact-working-icon {
-  font-size: 18px;
+  font-size: 25px;
   line-height: 1;
 }
 
 .contact-working-days {
   color: #000000;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 400;
 }
 
 .contact-working-separator {
   color: var(--dark-gray);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 .contact-working-hours {
   color: var(--dark-gray);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 
-/* REQUEST A QUOTE */
+/* =====================================================
+   REQUEST A QUOTE
+   ===================================================== */
 
 .contact-form-title {
   margin-top: 26px;
@@ -392,7 +419,9 @@ main.container {
 }
 
 
-/* FORM */
+/* =====================================================
+   CONTACT FORM
+   ===================================================== */
 
 .contact-form {
   width: 100%;
@@ -402,9 +431,9 @@ main.container {
 .contact-form label {
   display: block;
   margin-bottom: 16px;
-  color: var(--light-orange);
+  color: #000000;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .contact-form input,
@@ -422,6 +451,19 @@ main.container {
   font-size: 16px;
 }
 
+.contact-form select {
+  background: var(--orange);
+  color: #ffffff;
+  border-color: var(--orange);
+  font-weight: 700;
+}
+
+.contact-form select option {
+  background: var(--orange);
+  color: #ffffff;
+  font-weight: 700;
+}
+
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
@@ -437,8 +479,8 @@ main.container {
   border: none;
   border-radius: 6px;
   padding: 10px 20px;
-  background: var(--light-orange);
-  color: #f97316;
+  background: #c65911;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -446,7 +488,7 @@ main.container {
 }
 
 .contact-form button:hover {
-  background: #f8d3bd;
+  background: #a9470b;
 }
 
 
@@ -603,7 +645,8 @@ main.container {
 @media (max-width: 900px) {
 
   .hero {
-    gap: 20px;
+    grid-template-columns: minmax(0, 1fr) 115px minmax(0, 1.2fr);
+    gap: 25px;
   }
 
   .hero-welcome {
@@ -612,6 +655,14 @@ main.container {
 
   .hero-welcome-line {
     font-size: clamp(1.5rem, 4vw, 2.2rem);
+  }
+
+  .hero-academic-title {
+    font-size: 28px;
+  }
+
+  .hero-academic-text {
+    font-size: 16px;
   }
 
   .preview-grid {
@@ -658,29 +709,93 @@ main.container {
     padding-bottom: 32px;
   }
 
+
+  /* HOME HERO MOBILE */
+
   .hero {
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
     margin-bottom: 32px;
   }
 
   .hero-welcome {
-    height: 221px;
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    justify-content: center;
   }
 
   .hero-welcome-line {
-    font-size: clamp(1.1rem, 5vw, 1.6rem);
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
     white-space: normal;
   }
 
   .hero-media {
     width: 115px;
     height: 221px;
-    flex: 0 0 115px;
+    flex: 0 0 221px;
+    align-self: center;
   }
 
   .hero-video {
     width: 115px;
     height: 221px;
+  }
+
+  .hero-academic {
+    width: 100%;
+  }
+
+  .hero-academic-title {
+    font-size: 28px;
+  }
+
+  .hero-academic-text {
+    font-size: 17px;
+  }
+
+
+  /* ABOUT */
+
+  .about-title,
+  .about-heading {
+    font-size: 32px;
+  }
+
+
+  /* SERVICES */
+
+  .services-title {
+    font-size: 32px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .contact-page-email,
+  .contact-page-whatsapp,
+  .contact-page-working {
+    font-size: 25px;
+  }
+
+  .contact-page-email a,
+  .contact-email-icon,
+  .contact-whatsapp-label,
+  .contact-whatsapp-icon,
+  .contact-whatsapp-number,
+  .contact-whatsapp-separator,
+  .contact-working-label,
+  .contact-working-icon,
+  .contact-working-days,
+  .contact-working-separator,
+  .contact-working-hours {
+    font-size: 25px;
   }
 
   .preview-grid {
@@ -690,12 +805,6 @@ main.container {
   .footer-whatsapp,
   .working-line {
     align-items: flex-start;
-  }
-
-  .contact-page-email,
-  .contact-page-whatsapp,
-  .contact-page-working {
-    font-size: 18px;
   }
 
   .contact-form {
