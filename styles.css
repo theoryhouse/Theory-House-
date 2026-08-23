@@ -49,7 +49,7 @@ a {
 }
 
 .header-top {
-  min-height: 82px;
+  min-height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,9 +63,10 @@ a {
   text-decoration: none;
 }
 
+/* BIGGER LOGO SIZE */
 .logo-img {
-  width: 52px;
-  height: 52px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   display: block;
 }
@@ -145,10 +146,7 @@ main.container {
 
 
 /* =====================================================
-   HERO VIDEO
-   EXACT SIZE:
-   WIDTH  = 4.75 inches ≈ 456px
-   HEIGHT = 2.32 inches ≈ 223px
+   HERO VIDEO (REMOVED BLACK SIDE BORDERS)
    ===================================================== */
 
 .hero-media {
@@ -160,13 +158,10 @@ main.container {
 }
 
 .hero-video {
-  width: 456px;
-  height: 223px;
+  width: 100%;
+  height: 100%;
   display: block;
-
-  /* SHOW THE COMPLETE VIDEO */
-  object-fit: contain;
-
+  object-fit: cover; /* Fills entire box width without side borders */
   background: #000000;
 }
 
@@ -367,7 +362,7 @@ main.container {
   }
 
   .hero-video {
-    width: 456px;
+    width: 100%;
     max-width: 100%;
     height: 223px;
   }
@@ -397,8 +392,8 @@ main.container {
   }
 
   .logo-img {
-    width: 46px;
-    height: 46px;
+    width: 60px;
+    height: 60px;
   }
 
   .site-title {
